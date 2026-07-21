@@ -1,0 +1,4545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHINNESE - Importaciones Exclusivas de China</title>
+    <!-- Google Fonts: Outfit (Moderna y elegante) y Playfair Display (Para encabezados premium) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           1. SISTEMA DE DISEÑO & VARIABLES (CSS CUSTOM PROPERTIES)
+           ========================================================================== */
+        :root {
+            /* Colores Principales */
+            --color-primary: #0a0e17;      /* Azul oscuro casi negro (Elegancia) */
+            --color-primary-light: #161f33;/* Azul intermedio para tarjetas y destacados */
+            --color-accent: #c5a059;       /* Dorado metálico (Exclusividad) */
+            --color-accent-hover: #b08d4b; /* Dorado oscuro */
+            --color-accent-light: #f7eedb; /* Dorado claro para fondos de alertas */
+            --color-crimson: #9e2a2b;      /* Rojo oscuro / Imperial (Alertas e insignias) */
+            --color-crimson-hover: #7f2223;
+            
+            /* Colores Neutros */
+            --color-bg: #ffffff;           /* Fondo predominante */
+            --color-bg-alt: #f8fafc;       /* Fondo secundario gris suave */
+            --color-border: #e2e8f0;       /* Separadores y bordes suaves */
+            --color-text: #1e293b;         /* Texto principal */
+            --color-text-light: #64748b;   /* Texto secundario / Gris */
+            --color-text-white: #ffffff;   /* Texto blanco */
+            
+            /* Sombras, Bordes y Animaciones */
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.12);
+            --shadow-gold: 0 4px 15px rgba(197, 160, 89, 0.3);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Fuentes */
+            --font-headings: 'Playfair Display', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        /* ==========================================================================
+           2. ESTILOS GENERALES & RESET
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: var(--transition);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Componentes de Botón Comunes */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .btn-gold {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--color-accent-hover);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background-color: var(--color-primary);
+            color: var(--color-text-white);
+            border: 1px solid var(--color-primary-light);
+        }
+
+        .btn-dark:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1.5px solid var(--color-border);
+            color: var(--color-text);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            background-color: rgba(197, 160, 89, 0.05);
+        }
+
+        .badge-18 {
+            background-color: var(--color-crimson);
+            color: var(--color-text-white);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* ==========================================================================
+           3. AVISO DE MAYORÍA DE EDAD & MODAL GATEWAY (+18)
+           ========================================================================== */
+        /* Barra de Aviso Superior Fija */
+        .age-notice-bar {
+            background-color: var(--color-crimson);
+            color: var(--color-text-white);
+            text-align: center;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            position: relative;
+            z-index: 101;
+        }
+
+        .age-notice-bar span {
+            background: rgba(0,0,0,0.25);
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+
+        /* Modal de Entrada (+18 Gateway) */
+        .age-gateway {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(10, 14, 23, 0.95);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(15px);
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .age-gateway.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .age-gateway-card {
+            background-color: var(--color-primary);
+            border: 2px solid var(--color-accent);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            transform: scale(0.95);
+            animation: modalPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes modalPop {
+            to { transform: scale(1); }
+        }
+
+        .age-gateway-logo {
+            font-family: var(--font-headings);
+            font-size: 2.8rem;
+            color: var(--color-accent);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .age-gateway-logo span {
+            color: var(--color-text-white);
+        }
+
+        .age-gateway-badge {
+            display: inline-block;
+            background-color: var(--color-crimson);
+            color: var(--color-text-white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            width: 60px;
+            height: 60px;
+            line-height: 56px;
+            border-radius: 50%;
+            border: 2px solid var(--color-text-white);
+            margin: 15px auto;
+        }
+
+        .age-gateway h3 {
+            color: var(--color-text-white);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .age-gateway p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .age-gateway-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* ==========================================================================
+           4. CABECERA & NAVEGACIÓN
+           ========================================================================== */
+        .main-header {
+            background-color: rgba(10, 14, 23, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-headings);
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo span {
+            color: var(--color-text-white);
+        }
+
+        .logo-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-crimson);
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 2px;
+        }
+
+        /* Menú de Navegación */
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--color-accent);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Acciones de la Cabecera */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-icon-btn {
+            position: relative;
+            color: var(--color-text-white);
+            font-size: 1.5rem;
+            padding: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .cart-icon-btn:hover {
+            color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background-color: var(--color-crimson);
+            color: var(--color-text-white);
+            font-size: 0.7rem;
+            font-weight: 700;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--color-primary);
+            animation: badgePulse 2s infinite;
+        }
+
+        @keyframes badgePulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        /* Botón de Menú Responsive (Hamburger) */
+        .mobile-menu-btn {
+            display: none;
+            color: var(--color-text-white);
+            font-size: 1.6rem;
+            background: none;
+            border: none;
+        }
+
+        /* ==========================================================================
+           5. SECCIÓN INICIO (HOME) & ELEMENTOS PUBLICITARIOS
+           ========================================================================== */
+        .view-section {
+            display: none; /* Controlado por JS para enrutamiento SPA */
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background-color: var(--color-primary);
+            color: var(--color-text-white);
+            padding: 100px 0 120px;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(135deg, #0a0e17 0%, #162035 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-family: var(--font-headings);
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-title span {
+            color: var(--color-accent);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 540px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .hero-img-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-img-backdrop {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: linear-gradient(45deg, rgba(197,160,89,0.2) 0%, rgba(158,42,43,0.1) 100%);
+            filter: blur(40px);
+            animation: morphingBackdrop 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes morphingBackdrop {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%; }
+            100% { border-radius: 60% 40% 60% 40% / 40% 50% 50% 60%; }
+        }
+
+        .hero-img {
+            z-index: 1;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid rgba(197, 160, 89, 0.3);
+            max-height: 420px;
+            object-fit: cover;
+            transform: rotate(2deg);
+            transition: var(--transition);
+        }
+
+        .hero-img:hover {
+            transform: rotate(0deg) scale(1.03);
+            border-color: var(--color-accent);
+        }
+
+        /* Sección Beneficios */
+        .section-benefits {
+            padding: 80px 0;
+            background-color: var(--color-bg-alt);
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: var(--font-headings);
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-accent);
+            margin: 12px auto 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .benefit-card {
+            background-color: var(--color-bg);
+            padding: 35px 25px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-accent);
+        }
+
+        .benefit-icon {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--color-accent);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(197, 160, 89, 0.1);
+            border-radius: 50%;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        /* Sección Destacados */
+        .section-featured {
+            padding: 80px 0;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        /* Promo Banner Adultos */
+        .adults-promo-banner {
+            background-color: var(--color-primary);
+            color: var(--color-text-white);
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            margin: 60px 0 0;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .adults-promo-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -30%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(158, 42, 43, 0.25) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .promo-content h3 {
+            color: var(--color-text-white);
+            font-family: var(--font-headings);
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .promo-content p {
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .promo-badge-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .promo-circle-badge {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--color-accent);
+            background-color: var(--color-primary-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-gold);
+            transform: rotate(-10deg);
+        }
+
+        .promo-circle-badge span.num {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            line-height: 1;
+        }
+
+        .promo-circle-badge span.text {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--color-text-white);
+            letter-spacing: 1px;
+        }
+
+        /* ==========================================================================
+           6. SECCIÓN CATÁLOGO (FILTROS + GRILLA DE PRODUCTOS)
+           ========================================================================== */
+        .catalog-layout {
+            padding: 60px 0 80px;
+        }
+
+        /* Barra de búsqueda y filtros */
+        .filter-controls {
+            background-color: var(--color-bg-alt);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-border);
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .search-wrapper {
+            position: relative;
+            flex: 1;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px 14px 45px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-border);
+            color: var(--color-text);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+        }
+
+        .search-wrapper svg {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-text-light);
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Pestañas de Categoría */
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .category-tab {
+            padding: 10px 20px;
+            background-color: var(--color-bg);
+            border: 1px solid var(--color-border);
+            color: var(--color-text);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .category-tab:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        .category-tab.active {
+            background-color: var(--color-primary);
+            color: var(--color-accent);
+            border-color: var(--color-primary);
+        }
+
+        /* Resultados de búsqueda */
+        .results-info {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-bottom: 20px;
+        }
+
+        .results-info span {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        /* Grilla de productos */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        /* Tarjeta de Producto */
+        .product-card {
+            background-color: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-accent);
+        }
+
+        /* Imagen del producto con Overlay */
+        .product-card-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 230px;
+            background-color: #f1f5f9;
+            overflow: hidden;
+        }
+
+        .product-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-card-img {
+            transform: scale(1.08);
+        }
+
+        /* Etiquetas flotantes en tarjeta */
+        .product-card-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: rgba(10, 14, 23, 0.85);
+            color: var(--color-accent);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+
+        .product-card-stock-alert {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: var(--color-crimson);
+            color: var(--color-text-white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        /* Cuerpo de la tarjeta */
+        .product-card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-card-cat {
+            font-size: 0.75rem;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .product-card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+            line-height: 1.3;
+            min-height: 44px; /* Ajuste para mantener alineadas las tarjetas */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-card-rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: var(--color-accent);
+        }
+
+        .product-card-desc {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-bottom: 18px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 38px;
+        }
+
+        .product-card-footer {
+            margin-top: auto;
+            border-top: 1px solid var(--color-border);
+            padding-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .product-card-price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-card-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .product-card-price span {
+            color: var(--color-accent);
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-right: 2px;
+        }
+
+        .product-card-stock {
+            font-size: 0.75rem;
+            color: var(--color-text-light);
+        }
+
+        .product-card-stock.low-stock {
+            color: var(--color-crimson);
+            font-weight: 600;
+        }
+
+        .product-card-actions {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 8px;
+        }
+
+        .btn-card-detail {
+            padding: 8px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            color: var(--color-text);
+            text-align: center;
+        }
+
+        .btn-card-detail:hover {
+            border-color: var(--color-primary);
+            background-color: var(--color-bg-alt);
+        }
+
+        .btn-card-add {
+            padding: 8px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .btn-card-add:hover {
+            background-color: var(--color-accent-hover);
+        }
+
+        /* Estado de Catálogo Vacío */
+        .empty-catalog {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            border: 2px dashed var(--color-border);
+            border-radius: var(--radius-lg);
+            background-color: var(--color-bg-alt);
+        }
+
+        .empty-catalog svg {
+            width: 60px;
+            height: 60px;
+            color: var(--color-text-light);
+            margin-bottom: 15px;
+        }
+
+        .empty-catalog h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .empty-catalog p {
+            color: var(--color-text-light);
+            margin-bottom: 20px;
+        }
+
+        /* ==========================================================================
+           7. MODAL DETALLE DE PRODUCTO
+           ========================================================================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(10, 14, 23, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-container {
+            background-color: var(--color-bg);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid var(--color-border);
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--color-bg-alt);
+            color: var(--color-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            border: 1px solid var(--color-border);
+        }
+
+        .modal-close-btn:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text-white);
+            transform: rotate(90deg);
+        }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1.2fr;
+            min-height: 500px;
+        }
+
+        /* Galería Modal */
+        .modal-gallery {
+            position: relative;
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-top-left-radius: var(--radius-lg);
+            border-bottom-left-radius: var(--radius-lg);
+        }
+
+        .modal-gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 450px;
+        }
+
+        /* Panel Información Modal */
+        .modal-info-panel {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-tag-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .modal-cat {
+            font-size: 0.8rem;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .modal-title {
+            font-family: var(--font-headings);
+            font-size: 2rem;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .modal-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+
+        .modal-price span {
+            color: var(--color-accent);
+            font-size: 1.2rem;
+            margin-right: 3px;
+        }
+
+        .modal-divider {
+            height: 1px;
+            background-color: var(--color-border);
+            margin: 15px 0 20px;
+        }
+
+        .modal-desc {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .modal-specs-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--color-primary);
+        }
+
+        .modal-specs-list {
+            list-style: none;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .modal-specs-list li {
+            font-size: 0.88rem;
+            color: var(--color-text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-specs-list li svg {
+            color: var(--color-accent);
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .modal-action-row {
+            margin-top: auto;
+            background-color: var(--color-bg-alt);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1.5px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            background-color: var(--color-bg);
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .qty-btn:hover {
+            background-color: var(--color-bg-alt);
+            color: var(--color-accent);
+        }
+
+        .qty-input {
+            width: 44px;
+            height: 38px;
+            text-align: center;
+            border: none;
+            border-left: 1.5px solid var(--color-border);
+            border-right: 1.5px solid var(--color-border);
+            color: var(--color-primary);
+            font-weight: 600;
+            -moz-appearance: textfield;
+        }
+
+        .qty-input::-webkit-outer-spin-button,
+        .qty-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .modal-btn-add {
+            flex: 1;
+            padding: 12px;
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .modal-btn-add:hover {
+            background-color: var(--color-accent-hover);
+        }
+
+        /* ==========================================================================
+           8. CARRITO DE COMPRAS (DRAWER DESLIZABLE)
+           ========================================================================== */
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(10, 14, 23, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .cart-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .cart-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 460px;
+            height: 100vh;
+            background-color: var(--color-bg);
+            box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border-left: 1px solid var(--color-border);
+        }
+
+        .cart-overlay.active + .cart-drawer,
+        .cart-drawer.active {
+            transform: translateX(0);
+        }
+
+        /* Cabecera del Drawer */
+        .cart-header {
+            padding: 24px;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--color-primary);
+            color: var(--color-text-white);
+        }
+
+        .cart-header-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text-white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cart-header-title svg {
+            color: var(--color-accent);
+        }
+
+        .cart-close-btn {
+            color: var(--color-text-white);
+            font-size: 1.5rem;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .cart-close-btn:hover {
+            background-color: rgba(255,255,255,0.15);
+            color: var(--color-accent);
+        }
+
+        /* Lista de Productos del Carrito */
+        .cart-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 16px;
+            align-items: center;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 20px;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .cart-item-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--color-border);
+            background-color: var(--color-bg-alt);
+        }
+
+        .cart-item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .cart-item-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .cart-item-price {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            font-weight: 500;
+        }
+
+        .cart-item-price span {
+            color: var(--color-accent);
+        }
+
+        .cart-item-subtotal {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .cart-item-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 100%;
+            padding: 4px 0;
+        }
+
+        .cart-item-delete {
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        .cart-item-delete:hover {
+            color: var(--color-crimson);
+            background-color: rgba(158, 42, 43, 0.05);
+        }
+
+        /* Panel Inferior del Carrito */
+        .cart-footer {
+            padding: 24px;
+            border-top: 1px solid var(--color-border);
+            background-color: var(--color-bg-alt);
+        }
+
+        .cart-summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--color-text-light);
+        }
+
+        .cart-summary-row.total {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-top: 1px dashed var(--color-border);
+            padding-top: 12px;
+        }
+
+        .cart-summary-row.total span.val {
+            color: var(--color-primary);
+        }
+
+        .cart-summary-row.total span.val span {
+            color: var(--color-accent);
+        }
+
+        .cart-checkout-btn {
+            width: 100%;
+            padding: 16px;
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cart-checkout-btn:hover {
+            background-color: var(--color-accent-hover);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Carrito Vacío */
+        .cart-empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .cart-empty-state svg {
+            width: 70px;
+            height: 70px;
+            color: var(--color-border);
+            margin-bottom: 20px;
+        }
+
+        .cart-empty-state h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--color-primary);
+        }
+
+        .cart-empty-state p {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: 24px;
+            max-width: 250px;
+        }
+
+        /* ==========================================================================
+           9. PROCESO DE COMPRA (CHECKOUT)
+           ========================================================================== */
+        .checkout-layout {
+            padding: 60px 0 80px;
+        }
+
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .checkout-card {
+            background-color: var(--color-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            padding: 40px;
+        }
+
+        .checkout-card-title {
+            font-family: var(--font-headings);
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            border-bottom: 1.5px solid var(--color-border);
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkout-card-title svg {
+            color: var(--color-accent);
+        }
+
+        /* Formulario del Checkout */
+        .checkout-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-label span.req {
+            color: var(--color-crimson);
+        }
+
+        .form-input, .form-select, .form-textarea {
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--color-border);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+        }
+
+        .form-input.invalid, .form-select.invalid, .form-textarea.invalid {
+            border-color: var(--color-crimson);
+            background-color: rgba(158, 42, 43, 0.02);
+        }
+
+        .error-message {
+            color: var(--color-crimson);
+            font-size: 0.78rem;
+            font-weight: 500;
+            display: none;
+            margin-top: 2px;
+        }
+
+        .form-input.invalid + .error-message,
+        .form-select.invalid + .error-message,
+        .form-textarea.invalid + .error-message {
+            display: block;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Selector de Métodos de Pago */
+        .payment-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            grid-column: 1 / -1;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .payment-option {
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 16px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            background-color: var(--color-bg);
+            transition: var(--transition);
+        }
+
+        .payment-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .payment-option svg {
+            width: 32px;
+            height: 32px;
+            color: var(--color-text-light);
+        }
+
+        .payment-option span {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .payment-option:hover {
+            border-color: var(--color-accent);
+            background-color: rgba(197, 160, 89, 0.02);
+        }
+
+        .payment-option.selected {
+            border-color: var(--color-accent);
+            background-color: rgba(197, 160, 89, 0.05);
+            color: var(--color-accent);
+        }
+
+        .payment-option.selected svg {
+            color: var(--color-accent);
+        }
+
+        .payment-option.selected span {
+            color: var(--color-primary);
+        }
+
+        /* Paneles de detalles de pago dinámicos */
+        .payment-details-panel {
+            grid-column: 1 / -1;
+            background-color: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-top: 10px;
+            display: none;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        .payment-details-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilos Tarjeta (Con visual de tarjeta simulada) */
+        .card-simulator-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        /* Tarjeta de Crédito Visual */
+        .visual-card {
+            background: linear-gradient(135deg, #121824 0%, #2a3754 100%);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 15px;
+            aspect-ratio: 1.58 / 1;
+            width: 100%;
+            max-width: 290px;
+            padding: 24px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .visual-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .visual-card-chip {
+            width: 40px;
+            height: 30px;
+            background: linear-gradient(135deg, #e5c07b 0%, #abb2bf 100%);
+            border-radius: 5px;
+        }
+
+        .visual-card-logo {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--color-accent);
+            letter-spacing: 1px;
+        }
+
+        .visual-card-number {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin: 20px 0 10px;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        .visual-card-bottom {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+        }
+
+        .visual-card-label {
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            font-size: 0.6rem;
+            margin-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .visual-card-holder, .visual-card-expiry {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Estilos QR (Yape/Plin) */
+        .qr-simulator-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .qr-image-container {
+            width: 130px;
+            height: 130px;
+            background-color: white;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-image-container svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .qr-info-text h4 {
+            color: var(--color-primary);
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .qr-info-text p {
+            font-size: 0.88rem;
+            color: var(--color-text-light);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .qr-number-badge {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: var(--color-accent);
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 1rem;
+            font-family: monospace;
+        }
+
+        /* Estilos Transferencia */
+        .transfer-details-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .transfer-card {
+            background-color: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 16px;
+        }
+
+        .transfer-card h4 {
+            color: var(--color-primary);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 6px;
+        }
+
+        .transfer-card p {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-bottom: 4px;
+            font-family: monospace;
+        }
+
+        .transfer-card p span {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        /* Resumen de Compra en Checkout */
+        .checkout-summary-card {
+            background-color: var(--color-primary-light);
+            color: var(--color-text-white);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 100px;
+        }
+
+        .checkout-summary-card h3 {
+            color: var(--color-text-white);
+            font-family: var(--font-headings);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+        }
+
+        .checkout-summary-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-height: 250px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding-right: 8px;
+        }
+
+        /* Scrollbar estilizada para el resumen */
+        .checkout-summary-list::-webkit-scrollbar {
+            width: 4px;
+        }
+        .checkout-summary-list::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+        }
+
+        .checkout-summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
+        }
+
+        .checkout-summary-item-name {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
+        }
+
+        .checkout-summary-item-qty {
+            color: rgba(255, 255, 255, 0.5);
+            margin-left: 8px;
+        }
+
+        .checkout-summary-item-price {
+            font-weight: 600;
+            color: var(--color-accent);
+        }
+
+        .checkout-summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 10px;
+        }
+
+        .checkout-summary-row.total {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+            margin-top: 15px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-text-white);
+        }
+
+        .checkout-summary-row.total span.val {
+            color: var(--color-accent);
+        }
+
+        .checkout-terms-notice {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+
+        .checkout-terms-notice a {
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+
+        .btn-confirm-order {
+            width: 100%;
+            padding: 16px;
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .btn-confirm-order:hover {
+            background-color: var(--color-accent-hover);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================================================
+           10. PANTALLA DE CONFIRMACIÓN DE COMPRA (SUCCESS)
+           ========================================================================== */
+        .success-card {
+            text-align: center;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 50px 40px;
+            background-color: var(--color-bg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--color-border);
+        }
+
+        .success-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(197, 160, 89, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+            margin: 0 auto 25px;
+            animation: successPulse 2s infinite;
+        }
+
+        @keyframes successPulse {
+            0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.3); }
+            70% { box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+        }
+
+        .success-card h2 {
+            font-family: var(--font-headings);
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .success-card p.intro {
+            font-size: 1.05rem;
+            color: var(--color-text-light);
+            margin-bottom: 30px;
+        }
+
+        .order-ticket {
+            background-color: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-align: left;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .order-ticket::before, .order-ticket::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-image: linear-gradient(90deg, var(--color-border) 50%, transparent 50%);
+            background-size: 10px 4px;
+        }
+
+        .order-ticket::before { top: 0; }
+        .order-ticket::after { bottom: 0; }
+
+        .ticket-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--color-border);
+        }
+
+        .ticket-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .ticket-row span.label {
+            color: var(--color-text-light);
+            font-weight: 500;
+        }
+
+        .ticket-row span.val {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .ticket-row span.val.order-num {
+            color: var(--color-crimson);
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        .whatsapp-share-btn {
+            background-color: #25D366;
+            color: white;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        .whatsapp-share-btn:hover {
+            background-color: #128C7E;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================================================
+           11. SECCIÓN CONTACTO
+           ========================================================================== */
+        .contact-layout {
+            padding: 60px 0 80px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info-panel {
+            background-color: var(--color-primary);
+            color: var(--color-text-white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-info-panel h3 {
+            color: var(--color-text-white);
+            font-family: var(--font-headings);
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+
+        .contact-info-panel p.intro {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            margin-bottom: 35px;
+        }
+
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .contact-info-icon {
+            color: var(--color-accent);
+            background-color: rgba(255, 255, 255, 0.05);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info-text h4 {
+            color: var(--color-text-white);
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info-text p, .contact-info-text a {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+
+        .contact-info-text a:hover {
+            color: var(--color-accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--color-text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-link-btn:hover {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+            border-color: var(--color-accent);
+            transform: translateY(-3px);
+        }
+
+        /* ==========================================================================
+           12. PIE DE PÁGINA (FOOTER)
+           ========================================================================== */
+        .main-footer {
+            background-color: var(--color-primary);
+            color: var(--color-text-white);
+            padding: 80px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo-col p {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+            margin: 20px 0 25px;
+            max-width: 280px;
+            line-height: 1.5;
+        }
+
+        .footer-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            color: var(--color-accent);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Modal Libro de Reclamaciones */
+        .reclamaciones-modal-container {
+            max-width: 600px;
+            padding: 30px;
+        }
+        
+        .reclamaciones-modal-container h3 {
+            font-family: var(--font-headings);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ==========================================================================
+           13. NOTIFICACIONES FLOTANTES (TOAST SYSTEM)
+           ========================================================================== */
+        .toast-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            pointer-events: none;
+        }
+
+        .toast {
+            background-color: var(--color-primary);
+            color: var(--color-text-white);
+            padding: 14px 24px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            pointer-events: auto;
+            transform: translateX(-50px);
+            opacity: 0;
+            animation: toastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .toast.toast-remove {
+            border-left-color: var(--color-crimson);
+        }
+
+        .toast.hide {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        @keyframes toastIn {
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .toast svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .toast.toast-remove svg {
+            color: var(--color-crimson);
+        }
+
+        .toast.toast-success svg {
+            color: var(--color-accent);
+        }
+
+        /* ==========================================================================
+           14. MEDIA QUERIES (RESPONSIVENESS - MOBILE FIRST)
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .featured-grid, .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .checkout-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .checkout-summary-card {
+                position: static;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .hero-img-container {
+                order: -1;
+            }
+            
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-actions {
+                justify-content: center;
+            }
+            
+            .featured-grid, .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-gallery {
+                border-top-right-radius: var(--radius-lg);
+                border-bottom-left-radius: 0;
+            }
+            
+            .modal-gallery-img {
+                min-height: 250px;
+                height: 250px;
+            }
+            
+            .modal-info-panel {
+                padding: 24px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .payment-methods-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .card-simulator-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Responsive Nav */
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-primary);
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+                border-bottom: 1.5px solid var(--color-border);
+                transform: translateY(-120%);
+                transition: transform 0.4s ease;
+                z-index: 99;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .featured-grid, .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .adults-promo-banner {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+                text-align: center;
+            }
+            
+            .promo-circle-badge {
+                margin: 0 auto;
+            }
+            
+            .checkout-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .checkout-card {
+                padding: 20px;
+            }
+            
+            .qr-simulator-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .transfer-details-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .age-gateway-card {
+                padding: 30px 20px;
+            }
+            
+            .age-gateway-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       AVISO MAYORÍA DE EDAD (+18 GATEWAY)
+       ========================================================================== -->
+    <div id="ageGateway" class="age-gateway">
+        <div class="age-gateway-card">
+            <div class="age-gateway-logo">CHINNESE<span>.</span></div>
+            <div class="age-gateway-badge">18+</div>
+            <h3>Verificación de Mayoría de Edad</h3>
+            <p>Este sitio web comercializa productos exclusivos para adultos y requiere que tengas al menos 18 años para explorar y realizar transacciones de importación.</p>
+            <div class="age-gateway-actions">
+                <button onclick="confirmAge(true)" class="btn btn-gold">Sí, soy mayor de edad (18+)</button>
+                <button onclick="confirmAge(false)" class="btn btn-outline" style="color: var(--color-text-white); border-color: rgba(255,255,255,0.2);">No, salir</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de Advertencia Superior -->
+    <div class="age-notice-bar">
+        <span>18+</span> ⚠️ Compra exclusiva para mayores de edad. Se solicitará DNI físico al momento de la entrega.
+    </div>
+
+    <!-- ==========================================================================
+       CABECERA DE LA PÁGINA (HEADER & NAV)
+       ========================================================================== -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- Logotipo Textual -->
+            <a href="#" onclick="switchView('home'); return false;" class="logo" id="headerLogo">
+                CHINNESE<span class="logo-dot"></span>
+            </a>
+
+            <!-- Menú de Navegación -->
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" onclick="switchView('home'); return false;" class="nav-link active" id="navHome">Inicio</a></li>
+                    <li><a href="#" onclick="switchView('catalog'); return false;" class="nav-link" id="navCatalog">Catálogo</a></li>
+                    <li><a href="#" onclick="switchView('contact'); return false;" class="nav-link" id="navContact">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Acciones: Carrito y Menú Responsive -->
+            <div class="header-actions">
+                <button onclick="toggleCart(true)" class="cart-icon-btn" aria-label="Ver carrito" id="btnOpenCart">
+                    <!-- Icono SVG del Carrito -->
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-badge" id="cartBadgeCount">0</span>
+                </button>
+                
+                <button onclick="toggleMobileMenu()" class="mobile-menu-btn" aria-label="Menú móvil" id="btnMobileMenu">
+                    <!-- Icono SVG Hamburger -->
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+           SECCIÓN INICIO (VISTA: HOME)
+           ========================================================================== -->
+        <section id="viewHome" class="view-section active">
+            <!-- Hero Banner -->
+            <div class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-text-content">
+                        <h1 class="hero-title">Productos de China, <span>directo para ti</span></h1>
+                        <p class="hero-subtitle">Descubre una selección exclusiva de tecnología, organización y gadgets importados directamente de los principales fabricantes de Asia. Compras 100% seguras y envíos rápidos a todo el Perú.</p>
+                        <div class="hero-actions">
+                            <button onclick="switchView('catalog')" class="btn btn-gold">Ver Catálogo</button>
+                            <button onclick="switchView('contact')" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.3);">Hacer Consulta</button>
+                        </div>
+                    </div>
+                    <div class="hero-img-container">
+                        <div class="hero-img-backdrop"></div>
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=60" alt="Smartwatch Premium importado" class="hero-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beneficios de Comprar -->
+            <div class="section-benefits">
+                <div class="container">
+                    <h2 class="section-title">¿Por qué comprar en CHINNESE?</h2>
+                    <p class="section-subtitle">Garantizamos una experiencia de importación transparente, confiable y segura.</p>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <h3>Importación Directa</h3>
+                            <p>Sin intermediarios comerciales. Productos seleccionados directo de fábricas de alta calidad en China.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <h3>Precios Competitivos</h3>
+                            <p>Accede a tarifas preferenciales y descuentos exclusivos gracias al volumen de nuestra logística.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <h3>Compra 100% Segura</h3>
+                            <p>Tus transacciones y datos están protegidos. Ofrecemos diversos métodos de pago verificados.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Soporte Local</h3>
+                            <p>Atención al cliente en español y garantía de devolución administrada directamente desde Perú.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos Destacados -->
+            <div class="section-featured">
+                <div class="container">
+                    <h2 class="section-title">Productos Destacados</h2>
+                    <p class="section-subtitle">Una muestra exclusiva de los artículos más codiciados de esta semana.</p>
+                    
+                    <div class="featured-grid" id="featuredGrid">
+                        <!-- Generado dinámicamente mediante JavaScript -->
+                    </div>
+
+                    <!-- Banner de Restricción Legal de Edad en Home -->
+                    <div class="adults-promo-banner">
+                        <div class="promo-content">
+                            <h3>Compra Exclusiva para Adultos</h3>
+                            <p>Al realizar una orden en CHINNESE, declaras bajo juramento ser mayor de 18 años. Contamos con un estricto proceso de entrega donde el Courier solicitará y verificará tu documento de identidad (DNI/CE) físico vigente para otorgar el paquete.</p>
+                            <button onclick="switchView('catalog')" class="btn btn-gold">Ingresar al Catálogo</button>
+                        </div>
+                        <div class="promo-badge-container">
+                            <div class="promo-circle-badge">
+                                <span class="num">18+</span>
+                                <span class="text">Años Mínimo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN CATÁLOGO (VISTA: CATALOG)
+           ========================================================================== -->
+        <section id="viewCatalog" class="view-section">
+            <div class="container catalog-layout">
+                <h2 class="section-title">Nuestro Catálogo</h2>
+                <p class="section-subtitle">Explora nuestra colección selecta importada y filtra según tus preferencias.</p>
+
+                <!-- Panel de Filtros -->
+                <div class="filter-controls">
+                    <div class="search-row">
+                        <div class="search-wrapper">
+                            <!-- Icono SVG de Lupa -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" id="searchInput" oninput="handleFilterChange()" placeholder="Buscar productos por nombre o descripción..." class="search-input" aria-label="Buscador de productos">
+                        </div>
+                    </div>
+                    
+                    <div class="category-tabs" id="categoryTabs">
+                        <button onclick="filterCategory('todos', this)" class="category-tab active">Todos</button>
+                        <button onclick="filterCategory('tecnologia', this)" class="category-tab">Tecnología</button>
+                        <button onclick="filterCategory('hogar', this)" class="category-tab">Hogar</button>
+                        <button onclick="filterCategory('accesorios', this)" class="category-tab">Accesorios</button>
+                        <button onclick="filterCategory('belleza', this)" class="category-tab">Belleza</button>
+                        <button onclick="filterCategory('organizacion', this)" class="category-tab">Organización</button>
+                        <button onclick="filterCategory('novedosos', this)" class="category-tab">Artículos Novedosos</button>
+                    </div>
+                </div>
+
+                <!-- Info de resultados -->
+                <div class="results-info">
+                    Mostrando <span id="resultsCount">0</span> de <span id="totalCount">0</span> productos importados.
+                </div>
+
+                <!-- Grilla de Productos -->
+                <div class="products-grid" id="catalogGrid">
+                    <!-- Generado dinámicamente mediante JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN PROCESO DE COMPRA (VISTA: CHECKOUT)
+           ========================================================================== -->
+        <section id="viewCheckout" class="view-section">
+            <div class="container checkout-layout">
+                <div class="checkout-grid" id="checkoutMainGrid">
+                    <!-- Formulario de Compra -->
+                    <div class="checkout-card">
+                        <h2 class="checkout-card-title">
+                            <!-- Icono SVG de Datos de Entrega -->
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            Detalles de Entrega y Facturación
+                        </h2>
+                        
+                        <form id="checkoutForm" onsubmit="processCheckout(event)" class="checkout-form" novalidate>
+                            <div class="form-group">
+                                <label for="inputNombre" class="form-label">Nombres y Apellidos <span class="req">*</span></label>
+                                <input type="text" id="inputNombre" class="form-input" placeholder="Ej. Juan Pérez Medina" required>
+                                <div class="error-message">Ingresa un nombre y apellido válido (mínimo 5 letras).</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="inputDni" class="form-label">DNI (Mayor de 18 años) <span class="req">*</span></label>
+                                <input type="text" id="inputDni" class="form-input" maxlength="8" placeholder="8 dígitos numéricos" required>
+                                <div class="error-message">Ingresa un DNI válido (exactamente 8 números).</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="inputEmail" class="form-label">Correo Electrónico <span class="req">*</span></label>
+                                <input type="email" id="inputEmail" class="form-input" placeholder="ejemplo@correo.com" required>
+                                <div class="error-message">Ingresa un correo electrónico con formato correcto.</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="inputCelular" class="form-label">Número de Celular <span class="req">*</span></label>
+                                <input type="tel" id="inputCelular" class="form-input" maxlength="9" placeholder="9 dígitos (Inicia con 9)" required>
+                                <div class="error-message">Ingresa un celular peruano válido (9 números, inicia con 9).</div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="inputDireccion" class="form-label">Dirección de Entrega <span class="req">*</span></label>
+                                <input type="text" id="inputDireccion" class="form-input" placeholder="Calle, Avenida, Mza/Lote, Nro de Dpto" required>
+                                <div class="error-message">Ingresa una dirección detallada (mínimo 8 caracteres).</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="selectDepartamento" class="form-label">Ciudad / Departamento <span class="req">*</span></label>
+                                <select id="selectDepartamento" class="form-select" onchange="updateDistritos()" required>
+                                    <option value="" disabled selected>Selecciona Departamento</option>
+                                    <option value="Lima">Lima</option>
+                                    <option value="Arequipa">Arequipa</option>
+                                    <option value="La Libertad">La Libertad</option>
+                                    <option value="Lambayeque">Lambayeque</option>
+                                    <option value="Piura">Piura</option>
+                                    <option value="Cusco">Cusco</option>
+                                </select>
+                                <div class="error-message">Selecciona un departamento de entrega.</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="selectDistrito" class="form-label">Provincia o Distrito <span class="req">*</span></label>
+                                <select id="selectDistrito" class="form-select" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                </select>
+                                <div class="error-message">Selecciona una provincia o distrito de entrega.</div>
+                            </div>
+
+                            <!-- Métodos de Pago -->
+                            <div class="form-group full-width" style="margin-top: 15px;">
+                                <label class="form-label">Método de Pago Preferido <span class="req">*</span></label>
+                                <div class="payment-methods-grid">
+                                    <label class="payment-option selected" id="optTarjeta" onclick="selectPaymentMethod('tarjeta')">
+                                        <input type="radio" name="radioMetodoPago" value="tarjeta" checked>
+                                        <!-- SVG de Tarjeta -->
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                                        <span>Tarjeta</span>
+                                    </label>
+                                    
+                                    <label class="payment-option" id="optYape" onclick="selectPaymentMethod('yape')">
+                                        <input type="radio" name="radioMetodoPago" value="yape">
+                                        <!-- SVG de Yape (representado como código QR) -->
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="3"></line><line x1="15" y1="1" x2="15" y2="3"></line><line x1="9" y1="21" x2="9" y2="23"></line><line x1="15" y1="21" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>
+                                        <span>Yape</span>
+                                    </label>
+                                    
+                                    <label class="payment-option" id="optPlin" onclick="selectPaymentMethod('plin')">
+                                        <input type="radio" name="radioMetodoPago" value="plin">
+                                        <!-- SVG de Plin -->
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 16V8"></path><path d="M8 12h8"></path></svg>
+                                        <span>Plin</span>
+                                    </label>
+                                    
+                                    <label class="payment-option" id="optTransferencia" onclick="selectPaymentMethod('transferencia')">
+                                        <input type="radio" name="radioMetodoPago" value="transferencia">
+                                        <!-- SVG de Banco -->
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="22" width="20" height="2"></rect><path d="M12 2L2 7h20L12 2z"></path><path d="M4 22V7c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v15"></path></svg>
+                                        <span>Transferencia</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Detalles Dinámicos de Pago -->
+                            <div class="payment-details-panel active" id="panelTarjeta">
+                                <div class="card-simulator-wrapper">
+                                    <div class="visual-card">
+                                        <div class="visual-card-top">
+                                            <div class="visual-card-chip"></div>
+                                            <div class="visual-card-logo">VISA</div>
+                                        </div>
+                                        <div class="visual-card-number" id="cardNumSim">•••• •••• •••• ••••</div>
+                                        <div class="visual-card-bottom">
+                                            <div>
+                                                <div class="visual-card-label">Titular</div>
+                                                <div class="visual-card-holder" id="cardHolderSim">Juan Pérez</div>
+                                            </div>
+                                            <div>
+                                                <div class="visual-card-label">Expira</div>
+                                                <div class="visual-card-expiry" id="cardExpirySim">MM/AA</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div class="form-group">
+                                            <label for="cardNumInput" class="form-label" style="font-size:0.75rem;">Número de Tarjeta <span class="req">*</span></label>
+                                            <input type="text" id="cardNumInput" maxlength="19" class="form-input" placeholder="4000 1234 5678 9010" oninput="formatCardNum(this)" required>
+                                            <div class="error-message">Ingresa un número de tarjeta de 16 dígitos.</div>
+                                        </div>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                            <div class="form-group">
+                                                <label for="cardExpiryInput" class="form-label" style="font-size:0.75rem;">Expiración <span class="req">*</span></label>
+                                                <input type="text" id="cardExpiryInput" maxlength="5" class="form-input" placeholder="MM/AA" oninput="formatCardExpiry(this)" required>
+                                                <div class="error-message">Formato MM/AA inválido.</div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cardCvvInput" class="form-label" style="font-size:0.75rem;">CVV <span class="req">*</span></label>
+                                                <input type="password" id="cardCvvInput" maxlength="3" class="form-input" placeholder="•••" oninput="formatCardCvv(this)" required>
+                                                <div class="error-message">CVV de 3 dígitos.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-details-panel" id="panelYape">
+                                <div class="qr-simulator-wrapper">
+                                    <div class="qr-image-container">
+                                        <!-- SVG Generado con Patrón QR Estético -->
+                                        <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-primary)">
+                                            <rect x="5" y="5" width="25" height="25" stroke-width="4"></rect>
+                                            <rect x="10" y="10" width="15" height="15" fill="var(--color-primary)"></rect>
+                                            <rect x="70" y="5" width="25" height="25" stroke-width="4"></rect>
+                                            <rect x="75" y="10" width="15" height="15" fill="var(--color-primary)"></rect>
+                                            <rect x="5" y="70" width="25" height="25" stroke-width="4"></rect>
+                                            <rect x="10" y="75" width="15" height="15" fill="var(--color-primary)"></rect>
+                                            <!-- Puntos aleatorios simulando código QR -->
+                                            <rect x="40" y="10" width="8" height="8" fill="var(--color-accent)"></rect>
+                                            <rect x="55" y="20" width="8" height="8" fill="var(--color-primary)"></rect>
+                                            <rect x="45" y="45" width="12" height="12" fill="var(--color-primary)"></rect>
+                                            <rect x="75" y="45" width="8" height="8" fill="var(--color-accent)"></rect>
+                                            <rect x="40" y="70" width="8" height="15" fill="var(--color-primary)"></rect>
+                                            <rect x="80" y="75" width="10" height="10" fill="var(--color-primary)"></rect>
+                                            <circle cx="50" cy="50" r="4" fill="var(--color-crimson)"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="qr-info-text">
+                                        <h4>Transfiere directamente mediante Yape</h4>
+                                        <p>1. Abre tu aplicación Yape en tu celular.<br>2. Escanea el código QR de CHINNESE o envía el monto al número celular de soporte:</p>
+                                        <div class="qr-number-badge">999 888 777</div>
+                                        <p style="margin-top: 8px; font-size: 0.8rem; font-style: italic;">Titular registrado: CHINNESE IMPORTACIONES S.A.C.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-details-panel" id="panelPlin">
+                                <div class="qr-simulator-wrapper">
+                                    <div class="qr-image-container">
+                                        <!-- SVG Generado con Patrón QR Estético Plin -->
+                                        <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-primary)">
+                                            <rect x="5" y="5" width="25" height="25" stroke-width="4"></rect>
+                                            <rect x="10" y="10" width="15" height="15" fill="var(--color-primary)"></rect>
+                                            <rect x="70" y="5" width="25" height="25" stroke-width="4"></rect>
+                                            <rect x="75" y="10" width="15" height="15" fill="var(--color-primary)"></rect>
+                                            <rect x="5" y="70" width="25" height="25" stroke-width="4"></rect>
+                                            <rect x="10" y="75" width="15" height="15" fill="var(--color-primary)"></rect>
+                                            <rect x="45" y="15" width="8" height="8" fill="var(--color-primary)"></rect>
+                                            <rect x="50" y="50" width="16" height="16" fill="var(--color-accent)"></rect>
+                                            <rect x="75" y="55" width="8" height="8" fill="var(--color-primary)"></rect>
+                                            <rect x="40" y="80" width="12" height="8" fill="var(--color-primary)"></rect>
+                                            <circle cx="50" cy="50" r="5" fill="var(--color-primary)"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="qr-info-text">
+                                        <h4>Transfiere directamente mediante Plin</h4>
+                                        <p>1. Abre tu aplicación bancaria (Interbank, BBVA, Scotiabank, Banbif).<br>2. Escanea el código QR de Plin o envía la transferencia al celular:</p>
+                                        <div class="qr-number-badge">999 888 777</div>
+                                        <p style="margin-top: 8px; font-size: 0.8rem; font-style: italic;">Titular registrado: CHINNESE IMPORTACIONES S.A.C.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-details-panel" id="panelTransferencia">
+                                <div class="transfer-details-list">
+                                    <div class="transfer-card">
+                                        <h4>Banco de Crédito del Perú (BCP)</h4>
+                                        <p>Cuenta Corriente Soles:</p>
+                                        <p><span>193-4839201-0-45</span></p>
+                                        <p>CCI Interbancaria:</p>
+                                        <p><span>00219300483920104512</span></p>
+                                    </div>
+                                    <div class="transfer-card">
+                                        <h4>Interbank</h4>
+                                        <p>Cuenta Corriente Soles:</p>
+                                        <p><span>200-3004839281</span></p>
+                                        <p>CCI Interbancaria:</p>
+                                        <p><span>00320000300483928147</span></p>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.8rem; color: var(--color-text-light); margin-top: 12px; font-style: italic;">* Envía tu comprobante de transferencia al correo soporte@chinnese.com o al WhatsApp 999 888 777 para acelerar la validación y despacho de tu paquete.</p>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="textareaComentarios" class="form-label">Comentarios o Instrucciones adicionales (Opcional)</label>
+                                <textarea id="textareaComentarios" class="form-textarea" placeholder="Ej. Dejar en recepción, color de preferencia, referencia geográfica..."></textarea>
+                            </div>
+                            
+                            <input type="submit" id="btnSubmitForm" style="display: none;">
+                        </form>
+                    </div>
+
+                    <!-- Resumen del Pedido -->
+                    <div class="checkout-summary-card">
+                        <h3>Resumen de Pedido</h3>
+                        
+                        <div class="checkout-summary-list" id="checkoutSummaryList">
+                            <!-- Productos del Checkout generados por JS -->
+                        </div>
+                        
+                        <div class="checkout-summary-row">
+                            <span>Subtotal</span>
+                            <span id="checkoutSubtotal">S/. 0.00</span>
+                        </div>
+                        
+                        <div class="checkout-summary-row">
+                            <span>Costo de Envío (Courier)</span>
+                            <span style="color: #25D366; font-weight: 600;">GRATIS</span>
+                        </div>
+                        
+                        <div class="checkout-summary-row total">
+                            <span>Total</span>
+                            <span class="val" id="checkoutTotal"><span>S/.</span> 0.00</span>
+                        </div>
+                        
+                        <div class="checkout-terms-notice">
+                            Al hacer clic en "Confirmar Pago", aceptas nuestros <a href="#" onclick="alert('Políticas de Términos y Condiciones cargadas simuladamente.'); return false;">Términos de Compra</a> y confirmas bajo declaración jurada que eres mayor de 18 años.
+                        </div>
+                        
+                        <button type="button" onclick="triggerCheckoutSubmit()" class="btn btn-confirm-order">
+                            <!-- Icono SVG Candado -->
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            Confirmar Compra
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recibo / Confirmación de Compra (Cargado dinámicamente) -->
+                <div id="checkoutSuccessView" style="display: none;">
+                    <div class="success-card">
+                        <div class="success-icon-wrapper">
+                            <!-- Icono SVG Check Gigante -->
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        
+                        <h2>¡Pedido Recibido con Éxito!</h2>
+                        <p class="intro">Tu orden de importación ha sido procesada de manera correcta. A continuación, te mostramos los datos de tu recibo:</p>
+                        
+                        <div class="order-ticket" id="orderSuccessTicket">
+                            <!-- Ticket dinámico cargado por JS -->
+                        </div>
+                        
+                        <a href="#" id="btnWhatsAppOrder" target="_blank" class="btn whatsapp-share-btn">
+                            <!-- SVG WhatsApp -->
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="margin-right:8px;"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.978L2 22l5.188-1.36a9.92 9.92 0 0 0 4.821 1.239h.005c5.507 0 9.99-4.478 9.99-9.985a9.95 9.95 0 0 0-2.927-7.062A9.96 9.96 0 0 0 12.012 2zm5.718 13.91c-.25.704-1.442 1.288-1.983 1.36-.492.065-1.135.08-1.812-.135-.436-.14-1.07-.375-1.832-.705-3.237-1.4-5.326-4.666-5.488-4.88-.16-.215-1.285-1.697-1.285-3.24 0-1.54 1.096-2.296 1.488-2.485.392-.19.866-.237 1.135-.237.268 0 .538.002.773.014.246.012.576-.093.9.683.336.804 1.147 2.784 1.238 2.973.093.189.155.41.03.66-.124.25-.262.404-.424.595-.163.19-.34.425-.486.57-.163.16-.334.336-.143.66.19.324.846 1.385 1.81 2.24 1.246 1.106 2.298 1.448 2.628 1.614.33.165.525.138.72-.09.196-.228.847-.98.107-1.267-.237-.285-1.567-.707-1.834-.84-.268-.13-.464-.094-.66.094-.196.19-.763.95-.938 1.14-.175.19-.35.215-.688.05-.337-.166-1.428-.52-2.72-1.664-1.004-.888-1.682-1.986-1.88-2.32-.196-.337-.02-.52.15-.688.15-.152.336-.393.5-.59.166-.195.22-.336.33-.56.11-.225.056-.423-.028-.59-.083-.166-.763-1.826-1.045-2.502-.276-.665-.558-.575-.77-.585-.2-.01-.43-.01-.66-.01s-.6.086-.913.43c-.313.344-1.2 1.168-1.2 2.85 0 1.68 1.23 3.3 1.402 3.53.172.23 2.422 3.66 5.867 5.13.82.35 1.458.558 1.956.715.823.262 1.57.225 2.16.138.658-.098 2.023-.82 2.308-1.615z"/></svg>
+                            Enviar Confirmación por WhatsApp
+                        </a>
+                        
+                        <button onclick="resetToHomeAfterPurchase()" class="btn btn-dark" style="width: 100%;">
+                            Volver al Inicio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SECCIÓN CONTACTO (VISTA: CONTACT)
+           ========================================================================== -->
+        <section id="viewContact" class="view-section">
+            <div class="container contact-layout">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-subtitle">¿Tienes alguna pregunta sobre nuestros productos, envíos o garantías? Escríbenos.</p>
+
+                <div class="contact-grid">
+                    <!-- Tarjeta de información de soporte -->
+                    <div class="contact-info-panel">
+                        <h3>Información de Contacto</h3>
+                        <p class="intro">Estamos listos para ayudarte. Nuestro equipo en Lima resolverá todas tus inquietudes de importación.</p>
+                        
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <!-- SVG WhatsApp -->
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.978L2 22l5.188-1.36a9.92 9.92 0 0 0 4.821 1.239h.005c5.507 0 9.99-4.478 9.99-9.985a9.95 9.95 0 0 0-2.927-7.062A9.96 9.96 0 0 0 12.012 2zm5.718 13.91c-.25.704-1.442 1.288-1.983 1.36-.492.065-1.135.08-1.812-.135-.436-.14-1.07-.375-1.832-.705-3.237-1.4-5.326-4.666-5.488-4.88-.16-.215-1.285-1.697-1.285-3.24 0-1.54 1.096-2.296 1.488-2.485.392-.19.866-.237 1.135-.237.268 0 .538.002.773.014.246.012.576-.093.9.683.336.804 1.147 2.784 1.238 2.973.093.189.155.41.03.66-.124.25-.262.404-.424.595-.163.19-.34.425-.486.57-.163.16-.334.336-.143.66.19.324.846 1.385 1.81 2.24 1.246 1.106 2.298 1.448 2.628 1.614.33.165.525.138.72-.09.196-.228.847-.98.107-1.267-.237-.285-1.567-.707-1.834-.84-.268-.13-.464-.094-.66.094-.196.19-.763.95-.938 1.14-.175.19-.35.215-.688.05-.337-.166-1.428-.52-2.72-1.664-1.004-.888-1.682-1.986-1.88-2.32-.196-.337-.02-.52.15-.688.15-.152.336-.393.5-.59.166-.195.22-.336.33-.56.11-.225.056-.423-.028-.59-.083-.166-.763-1.826-1.045-2.502-.276-.665-.558-.575-.77-.585-.2-.01-.43-.01-.66-.01s-.6.086-.913.43c-.313.344-1.2 1.168-1.2 2.85 0 1.68 1.23 3.3 1.402 3.53.172.23 2.422 3.66 5.867 5.13.82.35 1.458.558 1.956.715.823.262 1.57.225 2.16.138.658-.098 2.023-.82 2.308-1.615z"/></svg>
+                                </div>
+                                <div class="contact-info-text">
+                                    <h4>WhatsApp Directo</h4>
+                                    <p><a href="https://wa.me/51999888777?text=Hola%20CHINNESE,%20deseo%20realizar%20una%20consulta." target="_blank">+51 999 888 777</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <!-- SVG Correo -->
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </div>
+                                <div class="contact-info-text">
+                                    <h4>Correo Corporativo</h4>
+                                    <p><a href="mailto:soporte@chinnese.com">soporte@chinnese.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <!-- SVG Horario -->
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                </div>
+                                <div class="contact-info-text">
+                                    <h4>Horario de Atención</h4>
+                                    <p>Lunes a Sábado: 9:00 AM - 7:00 PM<br>Domingo: Cerrado por descanso</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Redes Sociales -->
+                        <div class="social-links">
+                            <a href="https://facebook.com" target="_blank" class="social-link-btn" aria-label="Facebook">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-link-btn" aria-label="Instagram">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845a1.44 1.44 0 1 0 0-2.881 1.44 1.44 0 0 0 0 2.881z"/></svg>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-link-btn" aria-label="Twitter">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Consulta -->
+                    <div class="checkout-card">
+                        <h3 style="margin-bottom: 25px; font-family: var(--font-headings); font-size: 1.6rem;">Envíanos un Mensaje</h3>
+                        <form id="contactForm" onsubmit="sendContactForm(event)" class="checkout-form" novalidate>
+                            <div class="form-group">
+                                <label for="contactNombre" class="form-label">Nombre Completo <span class="req">*</span></label>
+                                <input type="text" id="contactNombre" class="form-input" placeholder="Tu nombre" required>
+                                <div class="error-message">Ingresa tu nombre completo.</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactEmail" class="form-label">Correo Electrónico <span class="req">*</span></label>
+                                <input type="email" id="contactEmail" class="form-input" placeholder="tu@correo.com" required>
+                                <div class="error-message">Ingresa un correo electrónico válido.</div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="contactAsunto" class="form-label">Asunto <span class="req">*</span></label>
+                                <input type="text" id="contactAsunto" class="form-input" placeholder="Motivo de tu consulta" required>
+                                <div class="error-message">Ingresa el asunto de la consulta (mínimo 4 caracteres).</div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="contactMensaje" class="form-label">Mensaje <span class="req">*</span></label>
+                                <textarea id="contactMensaje" class="form-textarea" placeholder="Escribe aquí los detalles de tu consulta..." required></textarea>
+                                <div class="error-message">Escribe un mensaje de consulta detallado (mínimo 10 caracteres).</div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <button type="submit" class="btn btn-gold" style="width:100%;">Enviar Consulta</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+       MODAL: DETALLES DEL PRODUCTO (DINÁMICO)
+       ========================================================================== -->
+    <div id="productDetailModal" class="modal-overlay" onclick="closeProductModal(event)">
+        <div class="modal-container">
+            <button onclick="toggleProductModal(false)" class="modal-close-btn" aria-label="Cerrar modal" id="btnCloseModal">
+                <!-- SVG X -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="modal-grid" id="modalProductDetailsGrid">
+                <!-- Se inyecta dinámicamente mediante JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       CARRITO DE COMPRAS (SIDEBAR DESLIZABLE)
+       ========================================================================== -->
+    <div id="cartOverlay" class="cart-overlay" onclick="toggleCart(false)"></div>
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-header">
+            <div class="cart-header-title">
+                <!-- SVG Carrito Cabecera -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                Mi Carrito de Importación
+            </div>
+            <button onclick="toggleCart(false)" class="cart-close-btn" aria-label="Cerrar carrito" id="btnCloseCart">
+                <!-- SVG Cerrar -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="cart-body" id="cartItemsContainer">
+            <!-- Items de Carrito dinámicos -->
+        </div>
+
+        <div class="cart-footer" id="cartFooterArea">
+            <div class="cart-summary-row">
+                <span>Subtotal Estimado</span>
+                <span id="cartSubtotalVal">S/. 0.00</span>
+            </div>
+            <div class="cart-summary-row">
+                <span>Costo Logístico Perú</span>
+                <span style="color:#25D366; font-weight: 600;">GRATIS</span>
+            </div>
+            <div class="cart-summary-row total">
+                <span>Monto Total</span>
+                <span class="val" id="cartTotalVal"><span>S/.</span> 0.00</span>
+            </div>
+            
+            <button onclick="proceedToCheckout()" class="cart-checkout-btn" id="btnGoToCheckout">
+                Proceder al Pago
+                <!-- SVG Flecha Derecha -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modales Adicionales: Libro de Reclamaciones -->
+    <div id="reclamacionesModal" class="modal-overlay" onclick="closeReclamacionesModal(event)">
+        <div class="modal-container reclamaciones-modal-container">
+            <button onclick="toggleReclamacionesModal(false)" class="modal-close-btn" aria-label="Cerrar modal">
+                <!-- SVG X -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <h3>
+                <!-- SVG Libro -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-accent);"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                Libro de Reclamaciones Virtual
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 20px;">De conformidad con el Código de Protección y Defensa del Consumidor de Perú, ponemos a su disposición esta herramienta para registrar su queja o reclamo formal.</p>
+            
+            <form id="reclamacionesForm" onsubmit="submitReclamacion(event)" class="checkout-form" novalidate>
+                <div class="form-group">
+                    <label for="recNombre" class="form-label">Nombre Completo <span class="req">*</span></label>
+                    <input type="text" id="recNombre" class="form-input" required>
+                    <div class="error-message">Requerido.</div>
+                </div>
+                <div class="form-group">
+                    <label for="recDni" class="form-label">DNI / CE <span class="req">*</span></label>
+                    <input type="text" id="recDni" maxlength="8" class="form-input" required>
+                    <div class="error-message">Requerido (8 dígitos).</div>
+                </div>
+                <div class="form-group">
+                    <label for="recEmail" class="form-label">Correo Electrónico <span class="req">*</span></label>
+                    <input type="email" id="recEmail" class="form-input" required>
+                    <div class="error-message">Email inválido.</div>
+                </div>
+                <div class="form-group">
+                    <label for="recCelular" class="form-label">Celular <span class="req">*</span></label>
+                    <input type="text" id="recCelular" maxlength="9" class="form-input" required>
+                    <div class="error-message">Requerido.</div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="selectTipoReclamo" class="form-label">Tipo de Reclamación <span class="req">*</span></label>
+                    <select id="selectTipoReclamo" class="form-select" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="reclamo">Reclamo (Disconformidad relacionada a los productos)</option>
+                        <option value="queja">Queja (Disconformidad respecto a la atención recibida)</option>
+                    </select>
+                    <div class="error-message">Selecciona un tipo.</div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="recDetalle" class="form-label">Detalle del Reclamo o Queja <span class="req">*</span></label>
+                    <textarea id="recDetalle" class="form-textarea" placeholder="Describe claramente el problema..." required></textarea>
+                    <div class="error-message">Ingresa el detalle.</div>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="btn btn-gold" style="width:100%;">Registrar Reclamación</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contenedor del sistema de Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- ==========================================================================
+       PIE DE PÁGINA (FOOTER)
+       ========================================================================== -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <!-- Columna Logo -->
+            <div class="footer-logo-col">
+                <a href="#" onclick="switchView('home'); return false;" class="logo" style="margin-bottom: 15px;">
+                    CHINNESE<span class="logo-dot"></span>
+                </a>
+                <p>Importación directa de productos de alta demanda y calidad de China. Exclusividad, modernidad y la seguridad que estás buscando en tus compras online.</p>
+                <div class="badge-18" style="background-color: var(--color-crimson); padding: 6px 12px; font-size: 0.85rem; border-radius:4px;">
+                    SOLO MAYORES DE 18 AÑOS
+                </div>
+            </div>
+
+            <!-- Columna Enlaces Rápidos -->
+            <div>
+                <h3 class="footer-title">Navegación</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="switchView('home'); return false;">Inicio</a></li>
+                    <li><a href="#" onclick="switchView('catalog'); return false;">Catálogo de Productos</a></li>
+                    <li><a href="#" onclick="switchView('contact'); return false;">Sección de Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna Soporte / Información -->
+            <div>
+                <h3 class="footer-title">Ayuda & Garantía</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="alert('Centro de ayuda simulado: Escríbanos a soporte@chinnese.com'); return false;">Centro de Ayuda</a></li>
+                    <li><a href="#" onclick="alert('Información de envíos simulada: Envíos terrestres nacionales vía Olva Courier.'); return false;">Envíos & Logística</a></li>
+                    <li><a href="#" onclick="alert('Política de devoluciones simulada: 7 días de garantía en Lima y provincias.'); return false;">Garantía de Fábrica</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna Documentación Legal -->
+            <div>
+                <h3 class="footer-title">Legalidad</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="alert('Términos y condiciones de importación de CHINNESE.'); return false;">Términos y Condiciones</a></li>
+                    <li><a href="#" onclick="alert('Políticas de protección de datos personales.'); return false;">Políticas de Privacidad</a></li>
+                    <li><a href="#" onclick="toggleReclamacionesModal(true); return false;" style="display:flex; align-items:center; gap:6px;">
+                        Libro de Reclamaciones
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-accent);"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <div class="footer-copy">
+                &copy; 2026 CHINNESE Importaciones. Todos los derechos reservados. Dirigido exclusivamente a mayores de 18 años. RUC Nro. 20601234567.
+            </div>
+            <div class="footer-bottom-links">
+                <a href="#" onclick="alert('Términos y Condiciones'); return false;">Términos de Compra</a>
+                <span>|</span>
+                <a href="#" onclick="alert('Políticas de cookies.'); return false;">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       CÓDIGO DE LOGICA DE APLICACIÓN (VANILLA JAVASCRIPT)
+       ========================================================================== -->
+    <script>
+        /* ==========================================================================
+           1. DATASET DE PRODUCTOS DE EJEMPLO
+           ========================================================================== */
+        const PRODUCTS = [
+            {
+                id: 1,
+                name: "Audífonos Inalámbricos Pro ANC",
+                category: "tecnologia",
+                price: 129.90,
+                shortDesc: "Audífonos con cancelación activa de ruido y sonido de alta fidelidad.",
+                description: "Experimenta la música sin interrupciones con los nuevos Audífonos Pro ANC. Cuentan con cancelación de ruido de hasta 35dB, batería de 30 horas con estuche de carga rápida, resistencia al sudor IPX5 y emparejamiento instantáneo Bluetooth 5.3.",
+                features: [
+                    "Cancelación Activa de Ruido (ANC) híbrida",
+                    "Batería de larga duración (hasta 30 horas totales)",
+                    "Resistencia al agua y sudor IPX5",
+                    "Control táctil inteligente de gestos",
+                    "Micrófono HD para llamadas ultra claras en exterior"
+                ],
+                image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=60",
+                stock: 12,
+                rating: 4.8,
+                featured: true
+            },
+            {
+                id: 2,
+                name: "Smartwatch Sport V10 Pro",
+                category: "tecnologia",
+                price: 189.90,
+                shortDesc: "Reloj inteligente con pantalla AMOLED y monitoreo de salud 24/7.",
+                description: "El Smartwatch Sport V10 es tu compañero ideal para entrenar y monitorear tu salud en tiempo real. Incluye sensor de ritmo cardíaco preciso, medición de oxígeno en sangre (SpO2), rastreador de sueño avanzado, más de 20 modos deportivos y resistencia al agua 5ATM.",
+                features: [
+                    "Pantalla AMOLED de 1.43 pulgadas de alta definición",
+                    "Monitoreo de frecuencia cardíaca, estrés y SpO2",
+                    "Batería de larga duración de hasta 14 días de uso continuo",
+                    "Notificaciones inteligentes de apps y recepción de llamadas",
+                    "Resistencia al agua 5ATM (apto para natación)"
+                ],
+                image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=60",
+                stock: 4, // Alerta stock bajo
+                rating: 4.7,
+                featured: true
+            },
+            {
+                id: 3,
+                name: "Lámpara de Mesa Inteligente LED RGB",
+                category: "hogar",
+                price: 99.90,
+                shortDesc: "Iluminación RGB personalizable con control táctil y de voz.",
+                description: "Crea el ambiente ideal en tu habitación o sala con esta lámpara inteligente. Ofrece 16 millones de colores vibrantes, control de brillo del 1% al 100%, sincronización rítmica con música y compatibilidad mediante controles integrados en su base táctil de aluminio pulido.",
+                features: [
+                    "Iluminación RGB con 16 millones de colores seleccionables",
+                    "Base táctil sensible y de diseño minimalista moderno",
+                    "Ajuste gradual de brillo y calidez de la luz",
+                    "Temporizador inteligente de apagado automático",
+                    "Eficiencia energética de nivel A+ de bajo consumo"
+                ],
+                image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&auto=format&fit=crop&q=60",
+                stock: 15,
+                rating: 4.9,
+                featured: false
+            },
+            {
+                id: 4,
+                name: "Humidificador Difusor Ultrasónico",
+                category: "hogar",
+                price: 79.90,
+                shortDesc: "Difusor de aceites esenciales con acabado de madera y luz LED cálida.",
+                description: "Mejora la calidad del aire y humedece tus espacios con este difusor ultrasónico silencioso de 500ml. Su tecnología de vaporización ultrasónica distribuye las esencias aromáticas uniformemente y su diseño elegante de grano de madera complementa cualquier decoración.",
+                features: [
+                    "Capacidad de 500ml para 10 horas de uso continuo",
+                    "Apagado automático sin agua para máxima seguridad",
+                    "7 colores de luces LED de ambiente seleccionables",
+                    "Tecnología de ultrasonido ultra silenciosa para dormir",
+                    "Incluye control remoto y taza medidora de agua"
+                ],
+                image: "https://images.unsplash.com/photo-1602928321679-560bb453f190?w=600&auto=format&fit=crop&q=60",
+                stock: 20,
+                rating: 4.6,
+                featured: false
+            },
+            {
+                id: 5,
+                name: "Lentes de Sol Polarizados Classic",
+                category: "accesorios",
+                price: 59.90,
+                shortDesc: "Lentes polarizados con protección UV400 y marco de aleación premium.",
+                description: "Protege tus ojos con la máxima elegancia y estilo. Estos lentes cuentan con lunas polarizadas de alta definición que reducen los reflejos molestos del sol, marco ultraligero de aluminio-magnesio y bisagras flexibles para un ajuste seguro.",
+                features: [
+                    "Protección 100% UV400 (bloquea rayos UVA y UVB nocivos)",
+                    "Lunas polarizadas TAC de alta resistencia a arañazos",
+                    "Marco de aleación de aluminio y magnesio ultraligero",
+                    "Estuche rígido protector y paño de microfibra incluidos",
+                    "Diseño unisex atemporal y ajuste ergonómico"
+                ],
+                image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&auto=format&fit=crop&q=60",
+                stock: 25,
+                rating: 4.5,
+                featured: false
+            },
+            {
+                id: 6,
+                name: "Mochila Impermeable Antirrobo Ejecutiva",
+                category: "accesorios",
+                price: 119.90,
+                shortDesc: "Mochila ejecutiva con puerto USB de carga y cierre oculto.",
+                description: "Diseñada para el viajero urbano y ejecutivo de hoy. Esta mochila cuenta con un cierre principal oculto para evitar robos, bolsillos secretos de acceso rápido con protección RFID, puerto USB externo para cargar tus dispositivos y compartimentos acolchados para laptop de hasta 15.6 pulgadas.",
+                features: [
+                    "Diseño antirrobo con cierres ocultos contra la espalda",
+                    "Puerto USB de carga exterior integrado (requiere powerbank)",
+                    "Material Oxford impermeable y de alta resistencia a cortes",
+                    "Capacidad acolchada para laptop de 15.6'' y tablet de 10''",
+                    "Banda reflectante de seguridad para caminatas nocturnas"
+                ],
+                image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=60",
+                stock: 10,
+                rating: 4.8,
+                featured: false
+            },
+            {
+                id: 7,
+                name: "Rodillo Facial de Jade y Gua Sha",
+                category: "belleza",
+                price: 45.00,
+                shortDesc: "Set de masaje facial de jade natural para drenaje y firmeza de la piel.",
+                description: "Revitaliza tu piel con nuestro set de Jade 100% natural. El rodillo facial ayuda a reducir la hinchazón y ojeras, mejorar la circulación y facilitar la absorción de sérums faciales, mientras que la piedra Gua Sha redefine el contorno facial y relaja la tensión muscular.",
+                features: [
+                    "Piedra de Jade verde 100% natural y pulida a mano",
+                    "Reduce la inflamación facial, bolsas y líneas de expresión",
+                    "Estimula el drenaje linfático y producción de colágeno",
+                    "Marco metálico reforzado libre de ruidos molestos al rodar",
+                    "Incluye caja de presentación de regalo muy elegante"
+                ],
+                image: "https://images.unsplash.com/photo-1608248597481-496100c80836?w=600&auto=format&fit=crop&q=60",
+                stock: 30,
+                rating: 4.7,
+                featured: false
+            },
+            {
+                id: 8,
+                name: "Depiladora IPL Luz Pulsada Pro",
+                category: "belleza",
+                price: 249.90,
+                shortDesc: "Depiladora de luz pulsada intensa para reducción de vello permanente.",
+                description: "Consigue una depilación profesional y permanente desde la comodidad de tu hogar. Esta depiladora IPL de última generación cuenta con 990,000 destellos de vida útil, 5 niveles de intensidad adaptables a tu tipo de piel, y modo automático para zonas de depilación rápida.",
+                features: [
+                    "Tecnología IPL avanzada con 990,000 flashes garantizados",
+                    "5 niveles de energía ajustables y modo automático/manual",
+                    "Resultados visibles de reducción en solo 8 semanas",
+                    "Sensor inteligente de seguridad de contacto con la piel",
+                    "Incluye lentes de protección ocular y rasuradora de preparación"
+                ],
+                image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=60",
+                stock: 6,
+                rating: 4.4,
+                featured: false
+            },
+            {
+                id: 9,
+                name: "Organizador de Escritorio Modular",
+                category: "organizacion",
+                price: 65.00,
+                shortDesc: "Organizador de madera de bambú y acrílico premium translúcido.",
+                description: "Mantén tu espacio de trabajo impecable y con estilo. Este organizador combina la calidez y sostenibilidad de la madera de bambú natural con cajones de acrílico translúcido mate de alta resistencia. Su diseño modular permite apilarlos a tu gusto.",
+                features: [
+                    "Estructura principal de madera de bambú ecológico resistente",
+                    "Cajones de acrílico mate con jaladores ergonómicos",
+                    "Múltiples compartimentos para lápices, clips, notas y gadgets",
+                    "Diseño modular apilable que maximiza el espacio útil",
+                    "Bordes redondeados y pulidos que previenen accidentes"
+                ],
+                image: "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?w=600&auto=format&fit=crop&q=60",
+                stock: 14,
+                rating: 4.6,
+                featured: false
+            },
+            {
+                id: 10,
+                name: "Organizador de Cables Magnético",
+                category: "organizacion",
+                price: 29.90,
+                shortDesc: "Soporte de silicona con clips magnéticos para cables de escritorio.",
+                description: "Dile adiós a los cables enredados y caídos en el suelo de tu oficina. Este organizador magnético de diseño premium se adhiere firmemente a cualquier escritorio y cuenta con tres clips magnéticos individuales para sostener tus cables de carga.",
+                features: [
+                    "Base principal de silicona con adhesivo fuerte libre de residuos",
+                    "3 clips magnéticos individuales para sujetar diversos grosores",
+                    "Material flexible antideslizante que no raya tus muebles",
+                    "Fácil colocación y retiro de cables con una sola mano",
+                    "Compatible con cables USB-C, Lightning, HDMI y auxiliares"
+                ],
+                image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop&q=60",
+                stock: 45,
+                rating: 4.8,
+                featured: false
+            },
+            {
+                id: 11,
+                name: "Mini Proyector LED Portátil Home Cinema",
+                category: "novedosos",
+                price: 329.90,
+                shortDesc: "Proyector compacto Full HD con bocina integrada y puertos HDMI.",
+                description: "Lleva el cine contigo a donde vayas. Este proyector de bolsillo proyecta imágenes de alta definición de hasta 100 pulgadas. Compatible con consolas de videojuegos, computadoras y celulares mediante puertos HDMI, USB y ranura para tarjetas de memoria.",
+                features: [
+                    "Resolución Full HD 1080p compatible con 1500 lúmenes de brillo",
+                    "Tamaño de proyección ajustable de 24 a 100 pulgadas de diagonal",
+                    "Parlante estéreo integrado de alta fidelidad acústica",
+                    "Entradas multimedia: HDMI, USB, Audio Jack, AV y MicroSD",
+                    "Vida útil del lente de iluminación LED de hasta 30,000 horas"
+                ],
+                image: "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=600&auto=format&fit=crop&q=60",
+                stock: 3, // Alerta stock bajo
+                rating: 4.9,
+                featured: true
+            },
+            {
+                id: 12,
+                name: "Taza Térmica con Agitador Magnético",
+                category: "novedosos",
+                price: 49.90,
+                shortDesc: "Taza de acero inoxidable con mezclador automático a batería.",
+                description: "Prepara tus bebidas calientes o frías al instante. Con solo tocar un botón en el asa, su tecnología de agitación magnética mezcla tu café, chocolate, proteínas o avena de manera uniforme y sin salpicaduras molestas.",
+                features: [
+                    "Agitación magnética rápida mediante botón táctil en el asa",
+                    "Cuerpo interno de acero inoxidable 304 de grado alimenticio",
+                    "Tapa sellada con boquilla antiderrames de doble silicona",
+                    "Funciona con 2 baterías AAA (no incluidas en el paquete)",
+                    "Capacidad de 400ml y capsula magnética agitadora removible"
+                ],
+                image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=60",
+                stock: 18,
+                rating: 4.7,
+                featured: false
+            }
+        ];
+
+        // Mapeo de distritos por departamento peruano
+        const DISTRITOS_PERU = {
+            "Lima": ["Miraflores", "San Isidro", "Santiago de Surco", "San Borja", "La Molina", "San Miguel", "Jesús María", "Magdalena del Mar", "Lince", "Chorrillos", "Los Olivos", "Independencia", "Ate Vitarte", "Cercado de Lima"],
+            "Arequipa": ["Arequipa Cercado", "Cayma", "Yanahuara", "Bustamante y Rivero", "Cerro Colorado", "Miraflores (Arequipa)", "Selva Alegre"],
+            "La Libertad": ["Trujillo", "Víctor Larco Herrera", "El Porvenir", "Florencia de Mora", "Huanchaco", "La Esperanza"],
+            "Lambayeque": ["Chiclayo", "José Leonardo Ortiz", "La Victoria", "Lambayeque Cercado", "Pimentel"],
+            "Piura": ["Piura Cercado", "Castilla", "Catacaos", "Veintiséis de Octubre", "Sullana", "Talara"],
+            "Cusco": ["Cusco Cercado", "Santiago", "Wanchaq", "San Sebastián", "San Jerónimo"]
+        };
+
+        /* ==========================================================================
+           2. ESTADO GLOBAL DE LA APLICACIÓN (STATE)
+           ========================================================================== */
+        let state = {
+            cart: [],
+            activeView: 'home',
+            currentCategory: 'todos',
+            searchQuery: '',
+            selectedPayment: 'tarjeta'
+        };
+
+        /* ==========================================================================
+           3. MANEJADORES DE EVENTOS DE INICIALIZACIÓN
+           ========================================================================== */
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAgeGate();
+            loadCartFromStorage();
+            renderFeaturedProducts();
+            renderCatalogProducts();
+            updateCartBadge();
+            
+            // Cerrar menú móvil si se hace clic afuera o en enlace
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('navMenu').classList.remove('active');
+                });
+            });
+        });
+
+        /* ==========================================================================
+           4. SISTEMA DE EDAD (GATEWAY & CHECKS)
+           ========================================================================== */
+        function checkAgeGate() {
+            const ageConfirmed = sessionStorage.getItem('chinnese_age_confirmed');
+            if (ageConfirmed === 'true') {
+                document.getElementById('ageGateway').classList.add('hidden');
+            } else {
+                document.getElementById('ageGateway').classList.remove('hidden');
+            }
+        }
+
+        function confirmAge(isOfAge) {
+            if (isOfAge) {
+                sessionStorage.setItem('chinnese_age_confirmed', 'true');
+                document.getElementById('ageGateway').classList.add('hidden');
+                showToast("Bienvenido. Acceso concedido a CHINNESE.");
+            } else {
+                window.location.href = "https://www.google.com";
+            }
+        }
+
+        /* ==========================================================================
+           5. ENRUTAMIENTO SPA (ROUTING / VIEW SWITCHING)
+           ========================================================================== */
+        function switchView(viewName) {
+            state.activeView = viewName;
+            
+            // Ocultar todas las secciones
+            document.querySelectorAll('.view-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostrar la sección activa
+            const activeSection = document.getElementById(`view${viewName.charAt(0).toUpperCase() + viewName.slice(1)}`);
+            if (activeSection) {
+                activeSection.classList.add('active');
+                // Hacer scroll al tope
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Actualizar menú activo
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            const activeLink = document.getElementById(`nav${viewName.charAt(0).toUpperCase() + viewName.slice(1)}`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            // Si cambiamos a checkout, renderizar resumen
+            if (viewName === 'checkout') {
+                renderCheckoutSummary();
+                document.getElementById('checkoutMainGrid').style.display = 'grid';
+                document.getElementById('checkoutSuccessView').style.display = 'none';
+            }
+        }
+
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        /* ==========================================================================
+           6. RENDERIZADO DEL CATÁLOGO & PRODUCTOS DESTACADOS
+           ========================================================================== */
+        function createProductCardHTML(product) {
+            const isLowStock = product.stock <= 5;
+            const stockText = isLowStock ? `⚠️ ¡Poco stock! (${product.stock} un.)` : `Stock disponible: ${product.stock} un.`;
+            const stockClass = isLowStock ? 'low-stock' : '';
+            const featuredTagHTML = product.featured ? `<span class="product-card-tag">Destacado</span>` : '';
+            const stockAlertHTML = isLowStock ? `<span class="product-card-stock-alert">Pocas Unidades</span>` : '';
+
+            // Generador de estrellas
+            let starsHTML = '';
+            const fullStars = Math.floor(product.rating);
+            for(let i=0; i<5; i++) {
+                if(i < fullStars) {
+                    starsHTML += '★';
+                } else if (i === fullStars && product.rating % 1 >= 0.5) {
+                    starsHTML += '★';
+                } else {
+                    starsHTML += '☆';
+                }
+            }
+
+            return `
+                <div class="product-card">
+                    ${featuredTagHTML}
+                    ${stockAlertHTML}
+                    <div class="product-card-img-wrapper">
+                        <img src="${product.image}" alt="${product.name}" class="product-card-img" loading="lazy">
+                    </div>
+                    <div class="product-card-body">
+                        <span class="product-card-cat">${product.category}</span>
+                        <h3 class="product-card-title">${product.name}</h3>
+                        <div class="product-card-rating">
+                            <span style="letter-spacing:1px;">${starsHTML}</span>
+                            <span style="color:var(--color-text-light); font-size:0.78rem; font-weight:500;">(${product.rating})</span>
+                        </div>
+                        <p class="product-card-desc">${product.shortDesc}</p>
+                        <div class="product-card-footer">
+                            <div class="product-card-price-row">
+                                <span class="product-card-price"><span>S/.</span>${product.price.toFixed(2)}</span>
+                                <span class="product-card-stock ${stockClass}">${stockText}</span>
+                            </div>
+                            <div class="product-card-actions">
+                                <button onclick="openProductModal(${product.id})" class="btn-card-detail">Detalles</button>
+                                <button onclick="addToCart(${product.id})" class="btn-card-add">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    Agregar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderFeaturedProducts() {
+            const featuredContainer = document.getElementById('featuredGrid');
+            const featuredList = PRODUCTS.filter(p => p.featured).slice(0, 3);
+            
+            featuredContainer.innerHTML = featuredList.map(p => createProductCardHTML(p)).join('');
+        }
+
+        function renderCatalogProducts() {
+            const catalogContainer = document.getElementById('catalogGrid');
+            const resultsCountElement = document.getElementById('resultsCount');
+            const totalCountElement = document.getElementById('totalCount');
+            
+            totalCountElement.innerText = PRODUCTS.length;
+
+            // Filtrar productos
+            const filteredProducts = PRODUCTS.filter(product => {
+                const matchesCategory = state.currentCategory === 'todos' || product.category === state.currentCategory;
+                const matchesSearch = product.name.toLowerCase().includes(state.searchQuery.toLowerCase()) ||
+                                      product.shortDesc.toLowerCase().includes(state.searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            resultsCountElement.innerText = filteredProducts.length;
+
+            if (filteredProducts.length === 0) {
+                catalogContainer.innerHTML = `
+                    <div class="empty-catalog">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            <line x1="8" y1="11" x2="14" y2="11"></line>
+                        </svg>
+                        <h3>No se encontraron productos</h3>
+                        <p>Intenta buscando otros términos o limpiando los filtros aplicados actualmente.</p>
+                        <button onclick="resetFilters()" class="btn btn-gold">Limpiar Filtros</button>
+                    </div>
+                `;
+            } else {
+                catalogContainer.innerHTML = filteredProducts.map(p => createProductCardHTML(p)).join('');
+            }
+        }
+
+        function filterCategory(categoryName, tabElement) {
+            state.currentCategory = categoryName;
+            
+            // Actualizar pestañas activas
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            tabElement.classList.add('active');
+
+            renderCatalogProducts();
+        }
+
+        function handleFilterChange() {
+            state.searchQuery = document.getElementById('searchInput').value;
+            renderCatalogProducts();
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            state.searchQuery = '';
+            state.currentCategory = 'todos';
+            
+            // Pestaña Todos activa
+            const tabs = document.querySelectorAll('.category-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            if (tabs[0]) tabs[0].classList.add('active');
+
+            renderCatalogProducts();
+        }
+
+        /* ==========================================================================
+           7. MODAL DETALLE DE PRODUCTO
+           ========================================================================== */
+        function openProductModal(productId) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            if (!product) return;
+
+            const modalContainer = document.getElementById('modalProductDetailsGrid');
+            
+            // Generar checks de especificaciones
+            const specsListHTML = product.features.map(feat => `
+                <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <span>${feat}</span>
+                </li>
+            `).join('');
+
+            modalContainer.innerHTML = `
+                <div class="modal-gallery">
+                    <img src="${product.image}" alt="${product.name}" class="modal-gallery-img">
+                </div>
+                <div class="modal-info-panel">
+                    <div class="modal-tag-row">
+                        <span class="badge-18">18+</span>
+                        <span class="modal-cat">${product.category}</span>
+                    </div>
+                    <h3 class="modal-title">${product.name}</h3>
+                    <div class="modal-price"><span>S/.</span>${product.price.toFixed(2)}</div>
+                    
+                    <div class="modal-desc">${product.description}</div>
+                    
+                    <h4 class="modal-specs-title">Características Principales:</h4>
+                    <ul class="modal-specs-list">
+                        ${specsListHTML}
+                    </ul>
+                    
+                    <div class="modal-divider"></div>
+                    
+                    <div class="modal-action-row">
+                        <div style="display:flex; flex-direction:column; gap:4px;">
+                            <span style="font-size:0.75rem; color:var(--color-text-light); font-weight:600; text-transform:uppercase;">Cantidad</span>
+                            <div class="quantity-control">
+                                <button type="button" onclick="adjustModalQty(-1, ${product.stock})" class="qty-btn">-</button>
+                                <input type="number" id="modalQtyInput" value="1" min="1" max="${product.stock}" class="qty-input" readonly>
+                                <button type="button" onclick="adjustModalQty(1, ${product.stock})" class="qty-btn">+</button>
+                            </div>
+                        </div>
+                        <button onclick="addModalProductToCart(${product.id})" class="modal-btn-add">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            Agregar al Carrito
+                        </button>
+                    </div>
+                    <div style="margin-top: 10px; text-align: right; font-size: 0.8rem; color: var(--color-text-light);">
+                        Stock Disponible: <span id="modalStockLabel" style="font-weight:600; color:var(--color-primary);">${product.stock} unidades</span>
+                    </div>
+                </div>
+            `;
+
+            toggleProductModal(true);
+        }
+
+        function toggleProductModal(show) {
+            const modal = document.getElementById('productDetailModal');
+            if (show) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeProductModal(event) {
+            // Cerrar solo si hace clic en el backdrop
+            if (event.target === document.getElementById('productDetailModal')) {
+                toggleProductModal(false);
+            }
+        }
+
+        function adjustModalQty(delta, maxStock) {
+            const input = document.getElementById('modalQtyInput');
+            let currentVal = parseInt(input.value) || 1;
+            currentVal += delta;
+            
+            if (currentVal < 1) currentVal = 1;
+            if (currentVal > maxStock) {
+                currentVal = maxStock;
+                showToast(`Máximo de stock alcanzado (${maxStock} unidades disponibles).`, 'warning');
+            }
+            
+            input.value = currentVal;
+        }
+
+        function addModalProductToCart(productId) {
+            const qtyInput = document.getElementById('modalQtyInput');
+            const qty = parseInt(qtyInput.value) || 1;
+            
+            addToCart(productId, qty);
+            toggleProductModal(false);
+        }
+
+        /* ==========================================================================
+           8. PERSISTENCIA Y OPERACIONES DEL CARRITO (LOCALSTORAGE)
+           ========================================================================== */
+        function loadCartFromStorage() {
+            try {
+                const storedCart = localStorage.getItem('chinnese_cart');
+                if (storedCart) {
+                    state.cart = JSON.parse(storedCart);
+                }
+            } catch (e) {
+                console.error("Error cargando carrito de localStorage:", e);
+                state.cart = [];
+            }
+        }
+
+        function saveCartToStorage() {
+            localStorage.setItem('chinnese_cart', JSON.stringify(state.cart));
+        }
+
+        function toggleCart(show) {
+            const drawer = document.getElementById('cartDrawer');
+            const overlay = document.getElementById('cartOverlay');
+            if (show) {
+                renderCartItems();
+                drawer.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawer.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function updateCartBadge() {
+            const totalItems = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+            const badge = document.getElementById('cartBadgeCount');
+            badge.innerText = totalItems;
+            
+            // Animación de bounce en el badge
+            badge.style.animation = 'none';
+            setTimeout(() => {
+                badge.style.animation = 'badgePulse 0.5s ease';
+            }, 10);
+        }
+
+        function addToCart(productId, quantity = 1) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingItem = state.cart.find(item => item.productId === productId);
+            
+            if (existingItem) {
+                const newQuantity = existingItem.quantity + quantity;
+                if (newQuantity > product.stock) {
+                    showToast(`No puedes agregar más de ${product.stock} unidades de este producto.`, 'warning');
+                    existingItem.quantity = product.stock;
+                } else {
+                    existingItem.quantity = newQuantity;
+                    showToast(`Se agregaron ${quantity} unidades de "${product.name}" al carrito.`);
+                }
+            } else {
+                if (quantity > product.stock) {
+                    showToast(`No puedes agregar más de ${product.stock} unidades de este producto.`, 'warning');
+                    state.cart.push({
+                        productId: productId,
+                        quantity: product.stock
+                    });
+                } else {
+                    state.cart.push({
+                        productId: productId,
+                        quantity: quantity
+                    });
+                    showToast(`"${product.name}" agregado al carrito.`);
+                }
+            }
+
+            saveCartToStorage();
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function updateCartQuantity(productId, delta) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            const cartItem = state.cart.find(item => item.productId === productId);
+            if (!cartItem || !product) return;
+
+            let newQty = cartItem.quantity + delta;
+            
+            if (newQty < 1) {
+                removeFromCart(productId);
+                return;
+            }
+
+            if (newQty > product.stock) {
+                newQty = product.stock;
+                showToast(`Máximo de stock disponible alcanzado (${product.stock} unidades).`, 'warning');
+            }
+
+            cartItem.quantity = newQty;
+            saveCartToStorage();
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function removeFromCart(productId) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            const name = product ? product.name : "Producto";
+            
+            state.cart = state.cart.filter(item => item.productId !== productId);
+            
+            saveCartToStorage();
+            updateCartBadge();
+            renderCartItems();
+            
+            showToast(`"${name}" removido del carrito.`, 'remove');
+        }
+
+        function renderCartItems() {
+            const container = document.getElementById('cartItemsContainer');
+            const footerArea = document.getElementById('cartFooterArea');
+
+            if (state.cart.length === 0) {
+                container.innerHTML = `
+                    <div class="cart-empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <h3>Tu carrito de importación está vacío</h3>
+                        <p>Explora nuestras secciones y agrega productos exclusivos a tu orden.</p>
+                        <button onclick="toggleCart(false); switchView('catalog');" class="btn btn-gold" style="padding:10px 20px; font-size:0.8rem;">Explorar Catálogo</button>
+                    </div>
+                `;
+                footerArea.style.display = 'none';
+                return;
+            }
+
+            footerArea.style.display = 'block';
+
+            let cartHTML = '';
+            let total = 0;
+
+            state.cart.forEach(item => {
+                const product = PRODUCTS.find(p => p.id === item.productId);
+                if (!product) return;
+
+                const subtotal = product.price * item.quantity;
+                total += subtotal;
+
+                cartHTML += `
+                    <div class="cart-item">
+                        <img src="${product.image}" alt="${product.name}" class="cart-item-img">
+                        <div class="cart-item-info">
+                            <span class="cart-item-title">${product.name}</span>
+                            <span class="cart-item-price"><span>S/.</span>${product.price.toFixed(2)} c/u</span>
+                            
+                            <div class="quantity-control" style="margin-top:6px; max-width: 120px;">
+                                <button type="button" onclick="updateCartQuantity(${product.id}, -1)" class="qty-btn" style="width:30px; height:30px; font-size:1rem;">-</button>
+                                <input type="number" value="${item.quantity}" class="qty-input" style="width:34px; height:30px; font-size:0.85rem;" readonly>
+                                <button type="button" onclick="updateCartQuantity(${product.id}, 1)" class="qty-btn" style="width:30px; height:30px; font-size:1rem;">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button onclick="removeFromCart(${product.id})" class="cart-item-delete" aria-label="Eliminar artículo">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                </svg>
+                            </button>
+                            <span class="cart-item-subtotal">S/. ${subtotal.toFixed(2)}</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = cartHTML;
+            document.getElementById('cartSubtotalVal').innerText = `S/. ${total.toFixed(2)}`;
+            document.getElementById('cartTotalVal').innerHTML = `<span>S/.</span> ${total.toFixed(2)}`;
+        }
+
+        function proceedToCheckout() {
+            if (state.cart.length === 0) {
+                showToast("Tu carrito está vacío. Agrega productos primero.", "warning");
+                return;
+            }
+            toggleCart(false);
+            switchView('checkout');
+        }
+
+        /* ==========================================================================
+           9. PROCESO DE CHECUKOUT (SECCIÓN CHECKOUT FORM & SIMULATION)
+           ========================================================================== */
+        // Cambiar dinámicamente entre distritos del Perú
+        function updateDistritos() {
+            const depto = document.getElementById('selectDepartamento').value;
+            const distritoselect = document.getElementById('selectDistrito');
+            
+            distritoselect.innerHTML = '<option value="" disabled selected>Selecciona una opción</option>';
+            
+            if (DISTRITOS_PERU[depto]) {
+                DISTRITOS_PERU[depto].forEach(distrito => {
+                    const opt = document.createElement('option');
+                    opt.value = distrito;
+                    opt.innerText = distrito;
+                    distritoselect.appendChild(opt);
+                });
+            }
+        }
+
+        // Método de Pago Switcher
+        function selectPaymentMethod(methodName) {
+            state.selectedPayment = methodName;
+            
+            // Actualizar opciones seleccionadas visualmente
+            document.querySelectorAll('.payment-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            document.getElementById(`opt${methodName.charAt(0).toUpperCase() + methodName.slice(1)}`).classList.add('selected');
+            
+            // Ocultar todos los paneles de detalle
+            document.querySelectorAll('.payment-details-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            // Mostrar el panel de detalle correspondiente
+            document.getElementById(`panel${methodName.charAt(0).toUpperCase() + methodName.slice(1)}`).classList.add('active');
+        }
+
+        // Renderizado del resumen del checkout
+        function renderCheckoutSummary() {
+            const container = document.getElementById('checkoutSummaryList');
+            let summaryHTML = '';
+            let total = 0;
+
+            state.cart.forEach(item => {
+                const product = PRODUCTS.find(p => p.id === item.productId);
+                if (!product) return;
+
+                const subtotal = product.price * item.quantity;
+                total += subtotal;
+
+                summaryHTML += `
+                    <div class="checkout-summary-item">
+                        <div>
+                            <span class="checkout-summary-item-name">${product.name}</span>
+                            <span class="checkout-summary-item-qty">x${item.quantity}</span>
+                        </div>
+                        <span class="checkout-summary-item-price">S/. ${subtotal.toFixed(2)}</span>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = summaryHTML;
+            document.getElementById('checkoutSubtotal').innerText = `S/. ${total.toFixed(2)}`;
+            document.getElementById('checkoutTotal').innerHTML = `<span>S/.</span> ${total.toFixed(2)}`;
+        }
+
+        // Simulador de entrada de tarjeta de crédito visual en tiempo real
+        function formatCardNum(input) {
+            // Filtrar solo números
+            let value = input.value.replace(/\D/g, '');
+            // Formatear agrupando en 4
+            let formatted = value.match(/.{1,4}/g);
+            input.value = formatted ? formatted.join(' ') : '';
+            
+            // Reflejar en la tarjeta visual
+            const label = document.getElementById('cardNumSim');
+            label.innerText = input.value || '•••• •••• •••• ••••';
+        }
+
+        function formatCardExpiry(input) {
+            let value = input.value.replace(/\D/g, '');
+            if (value.length > 2) {
+                input.value = value.slice(0,2) + '/' + value.slice(2,4);
+            } else {
+                input.value = value;
+            }
+            
+            const label = document.getElementById('cardExpirySim');
+            label.innerText = input.value || 'MM/AA';
+        }
+
+        function formatCardCvv(input) {
+            input.value = input.value.replace(/\D/g, '');
+        }
+
+        // Validaciones del formulario de Checkout
+        function triggerCheckoutSubmit() {
+            document.getElementById('btnSubmitForm').click();
+        }
+
+        function processCheckout(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('inputNombre');
+            const dni = document.getElementById('inputDni');
+            const email = document.getElementById('inputEmail');
+            const celular = document.getElementById('inputCelular');
+            const direccion = document.getElementById('inputDireccion');
+            const depto = document.getElementById('selectDepartamento');
+            const distrito = document.getElementById('selectDistrito');
+            
+            let isValid = true;
+            
+            // Validar Nombre
+            if (nombre.value.trim().length < 5 || !/^[a-zA-Z\sñÑáéíóúÁÉÍÓÚ]+$/.test(nombre.value)) {
+                nombre.classList.add('invalid');
+                isValid = false;
+            } else {
+                nombre.classList.remove('invalid');
+            }
+            
+            // Validar DNI
+            if (dni.value.trim().length !== 8 || !/^\d+$/.test(dni.value)) {
+                dni.classList.add('invalid');
+                isValid = false;
+            } else {
+                dni.classList.remove('invalid');
+            }
+            
+            // Validar Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                email.classList.add('invalid');
+                isValid = false;
+            } else {
+                email.classList.remove('invalid');
+            }
+            
+            // Validar Celular
+            if (celular.value.trim().length !== 9 || !/^9\d+$/.test(celular.value.trim())) {
+                celular.classList.add('invalid');
+                isValid = false;
+            } else {
+                celular.classList.remove('invalid');
+            }
+            
+            // Validar Dirección
+            if (direccion.value.trim().length < 8) {
+                direccion.classList.add('invalid');
+                isValid = false;
+            } else {
+                direccion.classList.remove('invalid');
+            }
+            
+            // Validar Departamento
+            if (depto.value === '') {
+                depto.classList.add('invalid');
+                isValid = false;
+            } else {
+                depto.classList.remove('invalid');
+            }
+            
+            // Validar Distrito
+            if (distrito.value === '') {
+                distrito.classList.add('invalid');
+                isValid = false;
+            } else {
+                distrito.classList.remove('invalid');
+            }
+
+            // Validar detalles de tarjeta si está seleccionada
+            if (state.selectedPayment === 'tarjeta') {
+                const cardNum = document.getElementById('cardNumInput');
+                const cardExpiry = document.getElementById('cardExpiryInput');
+                const cardCvv = document.getElementById('cardCvvInput');
+                
+                const cardClean = cardNum.value.replace(/\s/g, '');
+                if (cardClean.length !== 16 || !/^\d+$/.test(cardClean)) {
+                    cardNum.classList.add('invalid');
+                    isValid = false;
+                } else {
+                    cardNum.classList.remove('invalid');
+                }
+                
+                if (cardExpiry.value.length !== 5 || !/^\d{2}\/\d{2}$/.test(cardExpiry.value)) {
+                    cardExpiry.classList.add('invalid');
+                    isValid = false;
+                } else {
+                    cardExpiry.classList.remove('invalid');
+                }
+                
+                if (cardCvv.value.length !== 3 || !/^\d{3}$/.test(cardCvv.value)) {
+                    cardCvv.classList.add('invalid');
+                    isValid = false;
+                } else {
+                    cardCvv.classList.remove('invalid');
+                }
+            }
+
+            if (!isValid) {
+                showToast("Por favor, corrige los campos marcados en rojo.", "warning");
+                return;
+            }
+
+            // Si es válido, confirmamos compra y cargamos pantalla de confirmación
+            confirmOrder({
+                nombre: nombre.value,
+                dni: dni.value,
+                email: email.value,
+                celular: celular.value,
+                direccion: `${direccion.value}, ${distrito.value}, ${depto.value}`,
+                metodoPago: state.selectedPayment,
+                comentarios: document.getElementById('textareaComentarios').value
+            });
+        }
+
+        function confirmOrder(clientData) {
+            // Generar número de pedido ficticio
+            const orderNum = `CHN-2026-${Math.floor(10000 + Math.random() * 90000)}`;
+            const currentDate = "21/07/2026"; // Fecha simulada (en concordancia al metadato del sistema)
+            
+            // Calcular monto
+            let totalAmount = 0;
+            let itemsDetailsText = "";
+            
+            state.cart.forEach(item => {
+                const product = PRODUCTS.find(p => p.id === item.productId);
+                if (product) {
+                    const subtotal = product.price * item.quantity;
+                    totalAmount += subtotal;
+                    itemsDetailsText += `%0A• ${product.name} (x${item.quantity}) - S/. ${subtotal.toFixed(2)}`;
+                }
+            });
+
+            // Actualizar vista de éxito
+            const ticketContainer = document.getElementById('orderSuccessTicket');
+            
+            let paymentString = "";
+            switch (clientData.metodoPago) {
+                case 'tarjeta': paymentString = "Pago con Tarjeta de Crédito/Débito (Simulado)"; break;
+                case 'yape': paymentString = "Yape Directo (Pendiente de validación de captura)"; break;
+                case 'plin': paymentString = "Plin Directo (Pendiente de validación)"; break;
+                case 'transferencia': paymentString = "Transferencia Bancaria Directa (Pendiente)"; break;
+            }
+
+            ticketContainer.innerHTML = `
+                <div class="ticket-row">
+                    <span class="label">Código de Orden:</span>
+                    <span class="val order-num">${orderNum}</span>
+                </div>
+                <div class="ticket-row">
+                    <span class="label">Fecha del Pedido:</span>
+                    <span class="val">${currentDate}</span>
+                </div>
+                <div class="ticket-row">
+                    <span class="label">Cliente:</span>
+                    <span class="val">${clientData.nombre} (DNI: ${clientData.dni})</span>
+                </div>
+                <div class="ticket-row">
+                    <span class="label">Destino:</span>
+                    <span class="val">${clientData.direccion}</span>
+                </div>
+                <div class="ticket-row">
+                    <span class="label">Método de Pago:</span>
+                    <span class="val">${paymentString}</span>
+                </div>
+                <div class="ticket-row" style="margin-top:12px; border-top: 1px solid var(--color-border); padding-top: 10px;">
+                    <span class="label">Total Abonado:</span>
+                    <span class="val" style="color:var(--color-accent); font-weight:700; font-size:1.1rem;">S/. ${totalAmount.toFixed(2)}</span>
+                </div>
+            `;
+
+            // Configurar WhatsApp Enlace Dinámico
+            const waPhone = "51999888777";
+            const waMessage = `Hola CHINNESE, acabo de realizar un pedido de importación.*%0A*Código de Orden:* ${orderNum}%0A*Cliente:* ${clientData.nombre}%0A*DNI:* ${clientData.dni}%0A*Total:* S/. ${totalAmount.toFixed(2)}%0A*Productos:* ${itemsDetailsText}%0A*Método:* ${paymentString}`;
+            
+            document.getElementById('btnWhatsAppOrder').href = `https://wa.me/${waPhone}?text=${waMessage}`;
+
+            // Ocultar grilla principal de Checkout, mostrar éxito
+            document.getElementById('checkoutMainGrid').style.display = 'none';
+            document.getElementById('checkoutSuccessView').style.display = 'block';
+            
+            showToast("¡Pedido registrado exitosamente!");
+        }
+
+        function resetToHomeAfterPurchase() {
+            // Vaciar el carrito
+            state.cart = [];
+            saveCartToStorage();
+            updateCartBadge();
+            
+            // Limpiar inputs del formulario
+            document.getElementById('checkoutForm').reset();
+            document.getElementById('cardNumInput').value = '';
+            document.getElementById('cardExpiryInput').value = '';
+            document.getElementById('cardCvvInput').value = '';
+            
+            // Ir al inicio
+            switchView('home');
+        }
+
+        /* ==========================================================================
+           10. SECCIÓN CONTACTO (VALIDACIÓN & ENVÍO)
+           ========================================================================== */
+        function sendContactForm(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('contactNombre');
+            const email = document.getElementById('contactEmail');
+            const asunto = document.getElementById('contactAsunto');
+            const mensaje = document.getElementById('contactMensaje');
+            
+            let isValid = true;
+            
+            if (nombre.value.trim().length < 3) {
+                nombre.classList.add('invalid');
+                isValid = false;
+            } else {
+                nombre.classList.remove('invalid');
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                email.classList.add('invalid');
+                isValid = false;
+            } else {
+                email.classList.remove('invalid');
+            }
+            
+            if (asunto.value.trim().length < 4) {
+                asunto.classList.add('invalid');
+                isValid = false;
+            } else {
+                asunto.classList.remove('invalid');
+            }
+            
+            if (mensaje.value.trim().length < 10) {
+                mensaje.classList.add('invalid');
+                isValid = false;
+            } else {
+                mensaje.classList.remove('invalid');
+            }
+            
+            if (!isValid) {
+                showToast("Por favor, llena los campos requeridos correctamente.", "warning");
+                return;
+            }
+            
+            // Simular Envío
+            showToast("¡Consulta enviada! Nos contactaremos a la brevedad.");
+            document.getElementById('contactForm').reset();
+        }
+
+        /* ==========================================================================
+           11. LIBRO DE RECLAMACIONES (MODAL & ENVÍO)
+           ========================================================================== */
+        function toggleReclamacionesModal(show) {
+            const modal = document.getElementById('reclamacionesModal');
+            if (show) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        function closeReclamacionesModal(event) {
+            if (event.target === document.getElementById('reclamacionesModal')) {
+                toggleReclamacionesModal(false);
+            }
+        }
+        
+        function submitReclamacion(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('recNombre');
+            const dni = document.getElementById('recDni');
+            const email = document.getElementById('recEmail');
+            const celular = document.getElementById('recCelular');
+            const tipo = document.getElementById('selectTipoReclamo');
+            const detalle = document.getElementById('recDetalle');
+            
+            let isValid = true;
+            
+            if(nombre.value.trim() === '') { nombre.classList.add('invalid'); isValid = false; } else { nombre.classList.remove('invalid'); }
+            if(dni.value.trim().length !== 8) { dni.classList.add('invalid'); isValid = false; } else { dni.classList.remove('invalid'); }
+            if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { email.classList.add('invalid'); isValid = false; } else { email.classList.remove('invalid'); }
+            if(celular.value.trim().length < 9) { celular.classList.add('invalid'); isValid = false; } else { celular.classList.remove('invalid'); }
+            if(tipo.value === '') { tipo.classList.add('invalid'); isValid = false; } else { tipo.classList.remove('invalid'); }
+            if(detalle.value.trim() === '') { detalle.classList.add('invalid'); isValid = false; } else { detalle.classList.remove('invalid'); }
+            
+            if(!isValid) {
+                showToast("Por favor complete todos los datos requeridos.", "warning");
+                return;
+            }
+            
+            // Mostrar número de reclamación
+            const reclamoNum = `REC-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+            alert(`Reclamación registrada exitosamente.\nCódigo de seguimiento: ${reclamoNum}\nNos comunicaremos con usted en un plazo máximo de 15 días hábiles conforme a ley.`);
+            
+            document.getElementById('reclamacionesForm').reset();
+            toggleReclamacionesModal(false);
+        }
+
+        /* ==========================================================================
+           12. SISTEMA GLOBAL DE NOTIFICACIONES TOASTS
+           ========================================================================== */
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            
+            // Icono SVG correspondiente
+            let iconHTML = '';
+            if (type === 'success') {
+                iconHTML = `
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 8 12 12 16 14"></polyline>
+                    </svg>
+                `;
+            } else if (type === 'warning') {
+                iconHTML = `
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                `;
+            } else { // Remove o info
+                iconHTML = `
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                    </svg>
+                `;
+            }
+            
+            toast.innerHTML = `
+                ${iconHTML}
+                <span>${message}</span>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Autodestrucción en 3.5 segundos
+            setTimeout(() => {
+                toast.classList.add('hide');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
